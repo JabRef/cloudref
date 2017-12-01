@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'app/theme/sass/conf/colorSchemes/_mint';
+
+//change buttons
+button.close:focus {
+  outline: none !important;
+}
+
+button.btn:focus {
+  box-shadow: none !important;
+}
+
+button.btn.btn-link {
+  color: $content-text;
+  font-size: 1.1em;
+  padding: 0;
+}
+
+//change text colors
+.text-muted {
+  color: #8F9295 !important;
+}
+
+a.text-muted:focus, a.text-muted:hover {
+  color: #848484 !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+a.text-primary:focus, a.text-primary:hover {
+  color: $primary-dark !important;
+}
+
+.text-success {
+  color: $success !important;
+}
+
+a.text-success:focus, a.text-success:hover {
+  color: $success-dark!important;
+}
+
+.text-info {
+  color: $info !important;
+}
+
+a.text-info:focus, a.text-info:hover {
+  color: $info-dark !important;
+}
+
+.text-warning {
+  color: $warning !important;
+}
+
+a.text-warning:focus, a.text-warning:hover {
+  color: $warning-dark !important;
+}
+
+.text-danger {
+  color: $danger !important;
+}
+
+a.text-danger:focus, a.text-danger:hover {
+  color: $danger-dark !important;
+}

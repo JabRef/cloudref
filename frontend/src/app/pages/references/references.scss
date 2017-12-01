@@ -1,0 +1,17 @@
+@import '../../theme/sass/conf/colorSchemes/_mint';
+
+.ngx-datatable.material {
+  box-shadow: none;
+}
+
+/deep/ ngx-datatable .center-text {
+  text-align: center !important;
+}
+
+/deep/ .ngx-datatable.material .datatable-header .datatable-header-cell {
+  font-size: 14px !important;
+}
+
+/deep/ .confirmed {
+  background-color: mix(white, $success, 80%) !important;
+}

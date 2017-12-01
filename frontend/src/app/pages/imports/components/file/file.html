@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-10 col-lg-6 col-sm-12">
+    <ba-card cardTitle="Import from File">
+      <!--alert: error during upload-->
+      <div *ngIf="errorUpload" class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="close" (click)="errorUpload = false" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <span [innerHTML]="httpErrorMsg"></span>
+      </div>
+      <!--alert: no file selected-->
+      <div *ngIf="errorNoFile" class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
+        <button type="button" class="close" (click)="errorNoFile = false" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Error</strong> - No file selected
+      </div>
+      <!--file upload-->
+      <form id="fileUploadFrom">
+        <div class="form-group">
+          <label class="form-control-label">BibTeX File</label>
+          <input #fileInput ngFileSelect type="file" name="file" accept=".bib" (change)="setFileNameAtInput()"
+                 hidden/>
+          <div class="input-group">
+            <input type="text" [value]="defaultValue" class="form-control" readonly>
+            <span class="input-group-btn">
+                  <button class="btn btn-primary no-transform" type="button"
+                          (click)="showFileSelector()">Browse</button>
+                </span>
+          </div>
+          <button class="btn btn-success" (click)="addFile()"
+                  [disabled]="defaultValue === '' || (loading != null && loading)">
+            <i class="fa fa-spinner fa-pulse fa-1x fa-fw" [hidden]="loading == null || !loading"
+               style="margin-right: 8px"></i>
+            Add references
+          </button>
+        </div>
+      </form>
+    </ba-card>
+  </div>
+</div>

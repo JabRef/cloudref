@@ -1,0 +1,10 @@
+@import '../../../../../../theme/sass/conf/colorSchemes/_mint';
+
+/deep/ span.add {
+  color: blue;
+}
+
+/deep/ span.del {
+  color: red;
+  text-decoration: line-through;
+}

@@ -1,0 +1,588 @@
+<div *ngIf="httpErrorMsg != null" class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
+  <button type="button" class="close" (click)="httpErrorMsg = null" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <span [innerHTML]="httpErrorMsg"></span>
+</div>
+<div style="display: flex; align-items: center;" *ngIf="!(loadSuggestion || loadReferences) || !loading">
+  <!--voting buttons-->
+  <!--centered to card box-->
+  <div *ngIf="loadReferences" align="center" style="padding:5px 20px 27px 5px;">
+    <button type="button" class="btn btn-link" (click)="rateReference(userRatingEnum.POSITIVE)"
+            [ngClass]="{'text-primary': ratingUser != null && ratingUser == userRatingEnum.POSITIVE,
+        'text-muted': ratingUser != null && ratingUser == userRatingEnum.NEGATIVE}"
+            style="margin: auto;">
+      <i class="fa fa-caret-up" style="font-size: 50px"></i>
+    </button>
+    <!--remove larger distance between lower button-->
+    <div style="margin-bottom: -5px;">
+      <span class="lead"><strong>{{ratingReference}}</strong></span>
+    </div>
+    <button type="button" class="btn btn-link" (click)="rateReference(userRatingEnum.NEGATIVE)"
+            [ngClass]="{'text-primary': ratingUser != null && ratingUser == userRatingEnum.NEGATIVE,
+        'text-muted': ratingUser != null && ratingUser == userRatingEnum.POSITIVE}"
+            style="margin: auto; padding: 0pt; border-color: transparent">
+      <i class="fa fa-caret-down" style="font-size: 50px"></i>
+    </button>
+    <!--show if confirmed-->
+    <div *ngIf="confirmedReference">
+      <i class="fa fa-check text-success" style="font-size: 35px" placement="bottom"
+         ngbTooltip="Confirmed reference"></i>
+    </div>
+  </div>
+  <div style="width: 100%;">
+    <div class="card">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="#requiredTab" role="tab" data-toggle="tab">Required fields</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#optionalTab" role="tab" data-toggle="tab">Optional fields</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#generalTab" role="tab" data-toggle="tab">General</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#abstractTab" role="tab" data-toggle="tab">Abstract</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reviewTab" role="tab" data-toggle="tab">Review</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <!--Tab pane 1-->
+        <div role="tabpanel" class="tab-pane active" id="requiredTab">
+          <!--dropdown type-->
+          <div class="form-group">
+            <label class="form-control-label">Type of Reference</label><br>
+            <select class="form-control selectpicker" [(ngModel)]="reference.type.value"
+                    style="width: auto; height: 35px; padding-top: 0.5rem; padding-right: 0.75rem; padding-bottom: 0.5rem; padding-left: 0.75rem;"
+                    name="referenceType" (ngModelChange)="setChangedType()">
+              <option *ngFor="let type of types" [ngValue]="type">{{type}}</option>
+            </select>
+          </div>
+          <!--text fields first page-->
+          <form [formGroup]="formTabRequired">
+            <div class="form-group" [ngClass]="{'has-danger': !formTabRequired.controls['bibtexid'].pristine &&
+              (!formTabRequired.controls['bibtexid'].valid || keyExists)}">
+              <label class="form-control-label">BibTeX-key</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.key.value" required
+                     (keyup)="validateBibTeXKey()"
+                     [attr.readonly]="(loadReferences || loadSuggestion) ? '' : null"
+                     name="bibtexid" formControlName="bibtexid">
+              <div class="form-control-feedback"
+                   *ngIf="!formTabRequired.controls['bibtexid'].pristine && this.reference.key.value === ''">
+                BibTeX-key is required.
+              </div>
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['bibtexid'].pristine &&
+                !formTabRequired.controls['bibtexid'].valid && this.reference.key.value !== ''">
+                BibTeX-key is not valid.
+                Allowed characters: Uppercase letters, lowercase letters, numbers, and hyphens.
+              </div>
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['bibtexid'].pristine &&
+                formTabRequired.controls['bibtexid'].valid && keyExists">
+                BibTeX-key already exists. Please choose another one.
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('chapter', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['chapter'].valid}">
+              <label class="form-control-label">Chapter</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.chapter.string"
+                     name="chapter" formControlName="chapter">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['chapter'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('pages', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['pages'].valid}">
+              <label class="form-control-label">Pages</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.pages.string"
+                     name="pages" formControlName="pages">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['pages'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('title', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['title'].valid}">
+              <label class="form-control-label">Title</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.title.string"
+                     name="title" formControlName="title">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['title'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('booktitle', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['booktitle'].valid}">
+              <label class="form-control-label">Booktitle</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.booktitle.string"
+                     name="booktitle" formControlName="booktitle">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['booktitle'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('publisher', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['publisher'].valid}">
+              <label class="form-control-label">Publisher</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.publisher.string"
+                     name="publisher" formControlName="publisher">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['publisher'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('journal', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['journal'].valid}">
+              <label class="form-control-label">Journal</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.journal.string"
+                     name="journal" formControlName="journal">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['journal'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('school', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['school'].valid}">
+              <label class="form-control-label">School</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.school.string"
+                     name="school" formControlName="school">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['school'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('year', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['year'].valid}">
+              <label class="form-control-label">Year</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.year.string"
+                     name="year" formControlName="year">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['year'].valid">
+                {{ errorMessageNumbers }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('author', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['author'].valid}">
+              <label class="form-control-label">Author</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.author.string"
+                     name="author" formControlName="author">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['author'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('editor', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['editor'].valid}">
+              <label class="form-control-label">Editor</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.editor.string"
+                     name="editor" formControlName="editor">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['editor'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('organization', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['organization'].valid}">
+              <label class="form-control-label">Organization</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.organization.string"
+                     name="organization" formControlName="organization">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['organization'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('institution', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['institution'].valid}">
+              <label class="form-control-label">Institution</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.institution.string"
+                     name="institution" formControlName="institution">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['institution'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('note', 'required')"
+                 [ngClass]="{'has-danger': !formTabRequired.controls['note'].valid}">
+              <label class="form-control-label">Note</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.note.string"
+                     name="note" formControlName="note">
+              <div class="form-control-feedback" *ngIf="!formTabRequired.controls['note'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--Tab pane 2-->
+        <div role="tabpanel" class="tab-pane fade" id="optionalTab">
+          <form [formGroup]="formTabOptional">
+            <div class="form-group" *ngIf="containsField('author', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['author'].valid}">
+              <label class="form-control-label">Author</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.author.string"
+                     name="author" formControlName="author">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['author'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('title', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['title'].valid}">
+              <label class="form-control-label">Title</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.title.string"
+                     name="title" formControlName="title">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['title'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('language', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['language'].valid}">
+              <label class="form-control-label">Language</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.language.string"
+                     name="language" formControlName="language">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['language'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('editor', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['editor'].valid}">
+              <label class="form-control-label">Editor</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.editor.string"
+                     name="editor" formControlName="editor">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['editor'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('volume', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['volume'].valid}">
+              <label class="form-control-label">Volume</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.volume.string"
+                     name="volume" formControlName="volume">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['volume'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('number', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['number'].valid}">
+              <label class="form-control-label">Number</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.number.string"
+                     name="number" formControlName="number">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['number'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('revision', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['revision'].valid}">
+              <label class="form-control-label">Revision</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.revision.string"
+                     name="revision" formControlName="revision">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['revision'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('series', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['series'].valid}">
+              <label class="form-control-label">Series</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.series.string"
+                     name="series" formControlName="series">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['series'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('type', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['type'].valid}">
+              <label class="form-control-label">Type</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.type.string"
+                     name="type" formControlName="type">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['type'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('chapter', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['chapter'].valid}">
+              <label class="form-control-label">Chapter</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.chapter.string"
+                     name="chapter" formControlName="chapter">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['chapter'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('pages', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['pages'].valid}">
+              <label class="form-control-label">Pages</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.pages.string"
+                     name="pages" formControlName="pages">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['pages'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('organization', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['organization'].valid}">
+              <label class="form-control-label">Organization</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.organization.string"
+                     name="organization" formControlName="organization">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['organization'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('address', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['address'].valid}">
+              <label class="form-control-label">Address</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.address.string"
+                     name="address" formControlName="address">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['address'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('edition', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['edition'].valid}">
+              <label class="form-control-label">Edition</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.edition.string"
+                     name="edition" formControlName="edition">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['edition'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('howpublished', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['howpublished'].valid}">
+              <label class="form-control-label">Howpublished</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.howpublished.string"
+                     name="howpublished" formControlName="howpublished">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['howpublished'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('month', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['month'].valid}">
+              <label class="form-control-label">Month</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.month.string"
+                     name="month" formControlName="month">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['month'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('year', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['year'].valid}">
+              <label class="form-control-label">Year</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.year.string"
+                     name="year" formControlName="year">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['year'].valid">
+                {{ errorMessageNumbers }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('publisher', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['publisher'].valid}">
+              <label class="form-control-label">Publisher</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.publisher.string"
+                     name="publisher" formControlName="publisher">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['publisher'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('issn', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['issn'].valid}">
+              <label class="form-control-label">ISSN</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.issn.string"
+                     name="issn" formControlName="issn">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['issn'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('isbn', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['isbn'].valid}">
+              <label class="form-control-label">ISBN</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.isbn.string"
+                     name="isbn" formControlName="isbn">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['isbn'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('note', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['note'].valid}">
+              <label class="form-control-label">Note</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.note.string"
+                     name="note" formControlName="note">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['note'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" *ngIf="containsField('url', 'optional')"
+                 [ngClass]="{'has-danger': !formTabOptional.controls['url'].valid}">
+              <label class="form-control-label">URL</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.url.string"
+                     name="url" formControlName="url">
+              <div class="form-control-feedback" *ngIf="!formTabOptional.controls['url'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--Tab pane 3-->
+        <div role="tabpanel" class="tab-pane fade" id="generalTab">
+          <form [formGroup]="formTabGeneral">
+            <div class="form-group"
+                 [ngClass]="{'has-danger': !crossrefExists || !formTabGeneral.controls['crossref'].valid}">
+              <label class="form-control-label">Crossref</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.crossrefString.string"
+                     name="crossref" formControlName="crossref"
+                     (change)="existsCrossref(reference.fields.crossrefString.string)">
+              <div class="form-control-feedback" *ngIf="formTabGeneral.controls['crossref'].valid && !crossrefExists">
+                BibTeX-key does not exist. Please choose an existing one.
+              </div>
+              <div class="form-control-feedback" *ngIf="!formTabGeneral.controls['crossref'].valid">
+                BibTeX-key is not valid.
+                Allowed characters: Uppercase letters, lowercase letters, numbers, and hyphens.
+              </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-danger': !formTabGeneral.controls['keywords'].valid}">
+              <label class="form-control-label">Keywords</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.keywords.string"
+                     name="keywords" formControlName="keywords">
+              <div class="form-control-feedback" *ngIf="!formTabGeneral.controls['keywords'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-danger': !formTabGeneral.controls['doi'].valid}">
+              <label class="form-control-label">DOI</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.doi.string"
+                     name="doi" formControlName="doi">
+              <div class="form-control-feedback" *ngIf="!formTabGeneral.controls['doi'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-danger': !formTabGeneral.controls['url'].valid}">
+              <label class="form-control-label">URL</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.url.string"
+                     name="url" formControlName="url">
+              <div class="form-control-feedback" *ngIf="!formTabGeneral.controls['url'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+            <div class="form-group" [ngClass]="{'has-danger': !formTabGeneral.controls['comment'].valid}">
+              <label class="form-control-label">Comment</label>
+              <input class="form-control" type="text" [(ngModel)]="reference.fields.comment.string"
+                     name="comment" formControlName="comment">
+              <div class="form-control-feedback" *ngIf="!formTabGeneral.controls['comment'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+          </form>
+          <!--alert: saved file-->
+          <div *ngIf="saved" class="alert alert-success alert-dismissible fade show" role="alert">
+            <button type="button" class="close" (click)="saved = false" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Success</strong> - Saved PDF file to reference
+          </div>
+          <!--alert: error during upload-->
+          <div *ngIf="errorUpload" class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
+            <button type="button" class="close" (click)="errorUpload = false" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <span [innerHTML]="httpErrorMsgFile"></span>
+          </div>
+          <!--alert: no file selected-->
+          <div *ngIf="errorNoFile" class="alert alert-danger alert-dismissible fade show" role="alert">
+            <button type="button" class="close" (click)="errorNoFile = false" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Error</strong> - No file selected
+          </div>
+          <!--file upload-->
+          <form id="fileUploadFrom"
+                *ngIf="!loadSuggestion && (!loadReferences || reference.fields.Pdf.string === 'false')">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="form-control-label">PDF File</label>
+                  <input #fileInput ngFileSelect type="file" name="file" accept=".pdf" (change)="setFileNameAtInput()"
+                         hidden/>
+                  <div class="input-group">
+                    <input type="text" [value]="defaultValue" class="form-control" readonly>
+                    <span class="input-group-btn">
+                  <button class="btn btn-primary no-transform" type="button"
+                          (click)="showFileSelector()">Browse</button>
+                </span>
+                  </div>
+                  <button *ngIf="loadReferences" class="btn btn-success" (click)="addFile()"
+                          [disabled]="defaultValue === ''">Save PDF
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--Tab pane 4-->
+        <div role="tabpanel" class="tab-pane fade" id="abstractTab">
+          <form [formGroup]="formTabAbstract">
+
+            <div class="form-group" [ngClass]="{'has-danger': !formTabAbstract.controls['abstract'].valid}">
+              <label class="form-control-label">Abstract</label>
+              <textarea class="form-control" name="abstract" [(ngModel)]="reference.fields.abstract.string"
+                        formControlName="abstract" rows="15" style="max-height: 500px"></textarea>
+              <div class="form-control-feedback" *ngIf="!formTabAbstract.controls['abstract'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--Tab pane 5-->
+        <div role="tabpanel" class="tab-pane fade" id="reviewTab">
+          <form [formGroup]="formTabReview">
+            <div class="form-group" [ngClass]="{'has-danger': !formTabReview.controls['review'].valid}">
+              <label class="form-control-label">Review</label>
+              <textarea class="form-control" name="review" [(ngModel)]="reference.fields.review.string"
+                        formControlName="review" rows="15"></textarea>
+              <div class="form-control-feedback" *ngIf="!formTabReview.controls['review'].valid">
+                {{ errorMessageBraces }}
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--buttons for existing reference-->
+    <div class="row" *ngIf="loadReferences" style="margin:auto">
+      <div class="col-lg-4 col-md-6 col-sm-12"
+           [ngClass]="{'offset-lg-2': ((reference.fields.Pdf.string === 'true') &&
+           !(changedType || !formTabRequired.pristine || !formTabOptional.pristine || !formTabGeneral.pristine ||
+           !formTabAbstract.pristine || !formTabReview.pristine))
+           || (!(reference.fields.Pdf.string === 'true') && (changedType || !formTabRequired.pristine ||
+           !formTabOptional.pristine || !formTabGeneral.pristine || !formTabAbstract.pristine || !formTabReview.pristine)),
+
+           'offset-lg-4 offset-md-3': !(reference.fields.Pdf.string === 'true') &&
+           !(changedType || !formTabRequired.pristine || !formTabOptional.pristine || !formTabGeneral.pristine ||
+           !formTabAbstract.pristine || !formTabReview.pristine)}">
+        <button class="btn btn-primary btn-block" style="margin-bottom: 7px;"
+                (click)="viewSuggestions()">See suggestions for modification
+        </button>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12" *ngIf="changedType || !formTabRequired.pristine ||
+        !formTabOptional.pristine || !formTabGeneral.pristine || !formTabAbstract.pristine || !formTabReview.pristine">
+        <button class="btn btn-danger btn-block" style="margin-bottom: 7px;" (click)="saveSuggestion()">Suggest
+          changes
+        </button>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 offset-lg-0"
+           [ngClass]="{'offset-md-3': changedType || !formTabRequired.pristine || !formTabOptional.pristine ||
+           !formTabGeneral.pristine || !formTabAbstract.pristine || !formTabReview.pristine}"
+           *ngIf="reference.fields.Pdf.string === 'true'">
+        <button class="btn btn-primary btn-block"
+                (click)="pdfView()">See PDF and comments
+        </button>
+      </div>
+    </div>
+
+    <!--buttons for edit suggestion-->
+    <div class="row" *ngIf="loadSuggestion" style="margin:auto">
+      <div class="offset-md-0 col-md-6 offset-lg-2 col-lg-4 col-sm-12 offset-sm-0">
+        <button class="btn btn-danger btn-block" style="margin-bottom: 7px;" (click)="viewSuggestions()">Cancel</button>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <button class="btn btn-success btn-block" [disabled]="!(changedType || !formTabRequired.pristine ||
+        !formTabOptional.pristine || !formTabGeneral.pristine || !formTabAbstract.pristine || !formTabReview.pristine)"
+                (click)="saveSuggestion()">Save changes
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--button for saving new reference-->
+<div class="row" *ngIf="!loadReferences && !loadSuggestion">
+  <div class="offset-md-3 col-md-6 offset-lg-4 col-lg-4 col-sm-12 offset-sm-0">
+    <button class="btn btn-primary btn-block" (click)="save()">Save reference</button>
+  </div>
+</div>

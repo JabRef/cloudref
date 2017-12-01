@@ -1,0 +1,28 @@
+@import '../../../../../../theme/sass/conf/colorSchemes/_mint';
+
+.nav-item > .active {
+  background-color: $primary;
+  color: $label-text;
+}
+
+.nav-item > .disabled {
+  color: $disabled;
+}
+
+.nav > li > a {
+  padding: 14px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.no-transform {
+  transform: none;
+}

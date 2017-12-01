@@ -1,0 +1,89 @@
+<div *ngIf="httpErrorMsg != null" class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
+  <button type="button" class="close" (click)="httpErrorMsg = null" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <span [innerHTML]="httpErrorMsg"></span>
+</div>
+<div class="row" *ngIf="httpErrorMsg == null && loadedReferences">
+  <!--search-->
+  <div class="col-md-8 col-lg-6 col-sm-12">
+    <form #search="ngForm" (ngSubmit)="updateFilter()">
+      <div class="input-group" style="padding-left: 3px; padding-right: 11px">
+        <input type="text" class="form-control" placeholder="Search for..." name="searchInput"
+               [(ngModel)]="searchInputValue" #searchInput="ngModel">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit" style="background-color: #eff2f3">
+            <i class="fa fa-search"></i> Search
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<ba-card *ngIf="httpErrorMsg == null">
+  <!--table-->
+  <ngx-datatable #table *ngIf="loadedReferences && (references != null && references.length > 0)"
+                 class="material"
+                 [columnMode]="'force'"
+                 [headerHeight]="50"
+                 [footerHeight]="50"
+                 [rowHeight]="50"
+                 [sortType]="multi"
+                 [limit]="12"
+                 [rowClass]="getRowClass"
+                 [selected]="selected"
+                 [selectionType]="'single'"
+                 (select)='onSelect()'
+                 [rows]="references">
+    <!--columns-->
+    <ngx-datatable-column [width]="60" name="PDF" headerClass="center-text" cellClass="center-text">
+      <ng-template let-reference="row" ngx-datatable-cell-template style="text-align:center;">
+        <button *ngIf="reference.pdf"
+                [routerLink]="['./', reference.bibtexkey, 'pdf', 'comments']" type="button" class="btn btn-link"
+                style="height: 20pt; margin-top: -5px;">
+          <i class="fa fa-paperclip" style="font-size: 27px"></i>
+        </button>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [width]="60" name="Confirmed" headerClass="center-text" cellClass="center-text">
+      <ng-template let-reference="row" ngx-datatable-cell-template>
+        <i *ngIf="reference.confirmed" class="fa fa-check text-success"
+           style="font-size: 23px"></i>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [width]="130" name="Type">
+      <ng-template let-reference="row" ngx-datatable-cell-template>
+        {{reference.type}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [width]="300" name="Author/Editor">
+      <ng-template let-reference="row" ngx-datatable-cell-template>
+        {{reference.authorEditor}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [width]="300" name="Title">
+      <ng-template let-reference="row" ngx-datatable-cell-template>
+        {{reference.title}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [width]="60" name="Year">
+      <ng-template let-reference="row" ngx-datatable-cell-template>
+        {{reference.year}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="Journal/Booktitle">
+      <ng-template let-reference="row" ngx-datatable-cell-template>
+        {{reference.journalBooktitle}}
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column name="BibTeX-Key" prop="bibtexkey">
+      <ng-template let-reference="row" ngx-datatable-cell-template>
+        {{reference.bibtexkey}}
+      </ng-template>
+    </ngx-datatable-column>
+  </ngx-datatable>
+  <!--no references available-->
+  <p *ngIf="loadedReferences && (references == null || references.length <= 0)"
+     style="text-align: center; margin: 7px;">
+    No references available</p>
+</ba-card>

@@ -1,0 +1,20 @@
+<div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)"
+     [ngClass]="{scrolled: isScrolled}">
+  <a routerLink="" class="al-logo clearfix"><span>Cloud</span>Ref</a>
+  <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
+
+  <div class="user-profile clearfix">
+    <div class="dropdown al-user-profile">
+      <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
+        <!--<img src="{{ ( 'Nasta' | baProfilePicture ) }}">-->
+        <svg width="45" height="45" id="userAvatarJdenticon"></svg>
+      </a>
+      <ul class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
+        <!--<li class="dropdown-item"><a href><i class="fa fa-user"></i>Profile</a></li>-->
+        <!--<li class="dropdown-item"><a href><i class="fa fa-cog"></i>Settings</a></li>-->
+        <li class="dropdown-item" (click)="logout()"><a href class="signout"><i class="fa fa-power-off"></i>Sign out</a></li>
+      </ul>
+    </div>
+    <ba-msg-center></ba-msg-center>
+  </div>
+</div>

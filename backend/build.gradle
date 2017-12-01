@@ -1,0 +1,54 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}
+
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'java'
+
+idea {
+    module {
+        downloadJavadoc = true
+    }
+}
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile files('libs/jbibtex.jar')
+
+    compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.25.1'
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jdk-http', version: '2.25.1'
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet-core', version: '2.25.1'
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.25.1'
+    // convert list with BibTeXEntry objects to JSON
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.25.1'
+
+    compile 'org.glassfish.jersey.core:jersey-client:2.25.1'
+    compile group: 'javax.xml.ws', name: 'jaxws-api', version: '2.2.11'
+
+    compile group: 'io.swagger', name: 'swagger-jersey2-jaxrs', version: '1.5.16'
+
+    // fix errors
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jetty-servlet', version: '2.25.1'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.22'
+
+    // Hibernate and SQLite
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '4.3.11.Final'
+    compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.20.0'
+    compile group: 'com.enigmabridge', name: 'hibernate4-sqlite-dialect', version: '0.1.2'
+
+    compile group: 'org.eclipse.jgit', name: 'org.eclipse.jgit', version: '4.8.0.201706111038-r'
+    compile 'com.github.bkromhout:java-diff-utils:2.1.1'
+
+    testCompile 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:2.25.1'
+}
+
+apply plugin: 'application'
+mainClassName = "eu.cloudref.JaxRsServer"

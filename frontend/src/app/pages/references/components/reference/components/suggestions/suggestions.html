@@ -1,0 +1,76 @@
+<div *ngIf="httpErrorMsg != null" class="col-12 alert alert-danger alert-dismissible fade show" role="alert">
+  <button type="button" class="close" (click)="httpErrorMsg = null" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <span [innerHTML]="httpErrorMsg"></span>
+</div>
+<div *ngIf="!loading && entries != null && entries.length >= 1">
+  <div *ngFor="let suggestion of entries" style="display: flex; align-items: center;" [@anim]="suggestion">
+    <!--voting buttons-->
+    <!--centered to card box-->
+    <div id="rating" align="center" style="padding:5px 20px 27px 5px;">
+      <button type="button" class="btn btn-link" (click)="rateSuggestion(true, suggestion[0])"
+              [ngClass]="{'text-primary': ratingUser.get(suggestion[0]) != null && ratingUser.get(suggestion[0]),
+        'text-muted': ratingUser.get(suggestion[0]) != null && !ratingUser.get(suggestion[0])}"
+              style="margin: auto;">
+        <i class="fa fa-caret-up" style="font-size: 50px"></i>
+      </button>
+      <!--remove larger distance between lower button-->
+      <div style="margin-bottom: -5px;">
+        <span class="lead"><strong>{{overallRating.get(suggestion[0])}}</strong></span>
+      </div>
+      <button type="button" class="btn btn-link" (click)="rateSuggestion(false, suggestion[0])"
+              [ngClass]="{'text-primary': ratingUser.get(suggestion[0]) != null && !ratingUser.get(suggestion[0]),
+        'text-muted': ratingUser.get(suggestion[0]) != null && ratingUser.get(suggestion[0])}"
+              style="margin: auto; padding: 0pt; border-color: transparent">
+        <i class="fa fa-caret-down" style="font-size: 50px"></i>
+      </button>
+      <!--accept, reject-->
+      <button class="btn btn-success btn-block" *ngIf="userRole != null && userRole === 'MAINTAINER'"
+              (click)="mergeSuggestion(true, suggestion[0])">Accept
+      </button>
+      <button class="btn btn-danger btn-block" *ngIf="userRole != null && userRole === 'MAINTAINER'"
+              (click)="mergeSuggestion(false, suggestion[0])">Reject
+      </button>
+      <button class="btn btn-primary btn-block" *ngIf="userRole != null && userRole === 'MAINTAINER'"
+              [routerLink]="['./', suggestion[0]]">Edit
+      </button>
+    </div>
+    <!--references-->
+    <div class="card" style="width: 100%;">
+      <!--headings-->
+      <div class="card-header">
+        <div class="row" style="padding-bottom: 7pt">
+          <div class="col-lg-6 col-md-6"><h3 class="card-title">Current Reference</h3></div>
+          <div class="col-lg-6 col-md-6"><h3 class="card-title">Suggestion #{{suggestion[0]}}</h3></div>
+        </div>
+      </div>
+      <div class="card-body" style="overflow-y: scroll; max-height: 450px;">
+        <div class="row" *ngFor="let fn of labelsArray.get(suggestion[0])">
+          <!--reference on master branch-->
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group" *ngIf="master.get(fn) != null">
+              <label class="form-control-label">{{ fn }}</label>
+              <div class="form-control" [innerHTML]="master.get(fn)"></div>
+            </div>
+          </div>
+          <!--suggestion-->
+          <div class="col-lg-6 col-md-6">
+            <div class="form-group" *ngIf="suggestion[1].get(fn) != null">
+              <label class="form-control-label">{{ fn }}</label>
+              <div class="form-control" [innerHTML]="suggestion[1].get(fn)"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--no suggestions available-->
+<ba-card *ngIf="!loading && (entries == null || entries.length < 1)">
+  <p style="text-align: center; margin: 7px;">
+    No suggestions for modification available</p>
+</ba-card>
+<div class="offset-sm-4 col-md-4" *ngIf="!loading">
+  <button class="btn btn-primary btn-block" (click)="viewReference()">Back to reference</button>
+</div>
