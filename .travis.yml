@@ -1,0 +1,27 @@
+language: java
+
+# we test at Ubuntu Trusty (Ubuntu 14.04 LTS)
+# see https://docs.travis-ci.com/user/trusty-ci-environment/
+# This environment is continuously updated as described in https://docs.travis-ci.com/user/build-environment-updates/
+dist: trusty
+sudo: required
+
+env:
+  global:
+    - GRADLE_OPTS=-Dorg.gradle.daemon=false
+    - TERM=dumb
+
+install: true
+
+script:
+  - ./gradlew check
+
+# cache gradle dependencies
+# https://docs.travis-ci.com/user/languages/java#Caching
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+
+cache:
+  directories:
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/

@@ -1,8 +1,11 @@
-# CloudRef
+# CloudRef [![Build Status](https://travis-ci.org/JabRef/cloudref.svg?branch=master)](https://travis-ci.org/JabRef/cloudref)
+
 CloudRef is a cloud-based tool for managing bibliographical references. 
 It supports collaborative work and quality assurance of references.
 The software consists of an Angular application at the front end and a Java application at the back end.
 For the front end the admin template "ng2-admin" from Akveo is used (https://akveo.github.io/ng2-admin).
+
+License: [MIT](https://tldrlegal.com/license/mit-license)
 
 ![CloudRef Screenshot](https://user-images.githubusercontent.com/14543255/32387802-e67fa39a-c0c5-11e7-98bc-b69c441e4300.jpg)
 

@@ -1,0 +1,12 @@
+plugins {
+  id "com.palantir.npm-run" version "0.5.0"
+}
+
+project.afterEvaluate {
+  // Tests are causing issues on Windows
+  // We use gradle for p
+  // We need to wrap this into project.afterEvaluate, because the npmrun plugin also defines its task at that stage.
+  // See https://github.com/palantir/gradle-npm-run-plugin/blob/62a2aa893c5e3ef12df3474b2af8081e72d2cc33/src/main/groovy/com/palantir/npmrun/NpmRunPlugin.groovy#L57
+  check.enabled = false
+  npm_run_test.enabled = false
+}

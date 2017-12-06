@@ -1,0 +1,7 @@
+apply plugin: 'war'
+
+war {
+  from '../frontend/dist'
+}
+
+war.dependsOn(":frontend:build")

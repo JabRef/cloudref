@@ -1,16 +1,9 @@
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.5'
-}
-
-apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'java'
+apply plugin: 'war'
 
-idea {
-    module {
-        downloadJavadoc = true
-    }
-}
+apply plugin: 'application'
+mainClassName = "eu.cloudref.JaxRsServer"
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
@@ -50,5 +43,3 @@ dependencies {
     testCompile 'org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-inmemory:2.25.1'
 }
 
-apply plugin: 'application'
-mainClassName = "eu.cloudref.JaxRsServer"
