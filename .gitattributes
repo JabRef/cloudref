@@ -1,0 +1,9 @@
+# unix  line endings at unix files
+gradlew eol=lf
+*.sh eol=lf
+
+AUTHORS eol=lf
+
+# ensure that line endings of *.java and *.properties are normalized
+*.properties text
+*.java text
