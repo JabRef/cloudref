@@ -18,7 +18,7 @@ public class CloudRefApi extends Application {
     public CloudRefApi() {
         BeanConfig beanConfig = new BeanConfig();
         beanConfig.setVersion("1.0");
-        beanConfig.setSchemes(new String[]{"http"});
+        beanConfig.setSchemes(new String[]{"http", "http","https"});
         beanConfig.setDescription("REST API of the CloudRef system.");
         beanConfig.setTitle("CloudRef API");
         beanConfig.setBasePath("");
