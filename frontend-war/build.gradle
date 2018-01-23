@@ -5,4 +5,5 @@ war {
   archiveName 'cloudref.war'
 }
 
+war.dependsOn(":frontend:npmInstall")
 war.dependsOn(":frontend:build")
