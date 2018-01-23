@@ -1,18 +1,48 @@
 package eu.cloudref.dal;
 
-import eu.cloudref.Configuration;
-import eu.cloudref.db.User;
-import org.jbibtex.*;
-
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Reader;
+import java.io.Writer;
+import java.nio.file.Files;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import eu.cloudref.Configuration;
+import eu.cloudref.db.User;
+import org.jbibtex.BibTeXDatabase;
+import org.jbibtex.BibTeXEntry;
+import org.jbibtex.BibTeXFormatter;
+import org.jbibtex.BibTeXParser;
+import org.jbibtex.BibTeXString;
+import org.jbibtex.CrossReferenceValue;
+import org.jbibtex.DigitStringValue;
+import org.jbibtex.Key;
+import org.jbibtex.ParseException;
+import org.jbibtex.StringValue;
+import org.jbibtex.Value;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Read and write .bib files from/to the file system.
  */
 public class BibService {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(BibService.class);
 
     private static String getBibDirectory() {
         return GitService.getRepositoryDirectory();
@@ -65,11 +95,8 @@ public class BibService {
                             }
                             references.add(entry);
                         }
-
                     } catch (IOException e) {
-                        e.printStackTrace();
-                    } catch (ParseException e) {
-                        e.printStackTrace();
+                        LOGGER.error("Could not load file", e);
                     }
                 }
             }
@@ -258,8 +285,8 @@ public class BibService {
                     // commit inserted files
                     GitService.commitImportedBibFile(insertedKeys, user);
                     return true;
-                } catch (ParseException | IOException e) {
-                    e.printStackTrace();
+                } catch (IOException e) {
+                    LOGGER.error("could not save reference", e);
                     return false;
                 }
             } catch (IOException e) {
@@ -344,33 +371,40 @@ public class BibService {
         return result;
     }
 
-    private static BibTeXDatabase parseBibTeX(File file) throws IOException, ParseException {
+    private static BibTeXDatabase parseBibTeX(File file) throws IOException {
         file.getParentFile().mkdirs();
-        Reader reader = new FileReader(file);
 
-        try {
-            BibTeXParser parser = new BibTeXParser() {
+        try (Reader reader = new FileReader(file)) {
+            BibTeXParser parser = null;
+            try {
+                parser = new BibTeXParser() {
 
-                @Override
-                public void checkStringResolution(Key key, BibTeXString string) {
-
-                    if (string == null) {
-                        System.err.println("Unresolved string: \"" + key.getValue() + "\"");
+                    @Override
+                    public void checkStringResolution(Key key, BibTeXString string) {
+                        if (string == null) {
+                            LOGGER.error("Unresolved string: \"" + key.getValue() + "\"");
+                        }
                     }
-                }
 
-                @Override
-                public void checkCrossReferenceResolution(Key key, BibTeXEntry entry) {
+                    @Override
+                    public void checkCrossReferenceResolution(Key key, BibTeXEntry entry) {
+    //                    if (entry == null) {
+    //                        System.err.println("Unresolved cross-reference: \"" + key.getValue() + "\"");
+    //                    }
+                    }
+                };
+            } catch (ParseException e) {
+                LOGGER.error("Could not parse reference", e);
+            }
 
-//                    if (entry == null) {
-//                        System.err.println("Unresolved cross-reference: \"" + key.getValue() + "\"");
-//                    }
-                }
-            };
-
-            return parser.parse(reader);
-        } finally {
-            reader.close();
+            try {
+                return parser.parse(reader);
+            } catch (ParseException e) {
+                LOGGER.error("Could not parse reference", e);
+                String content = String.join("\n", Files.readAllLines(file.toPath()));
+                LOGGER.debug("File content", content);
+                throw new IOException("Could not parse reference", e);
+            }
         }
     }
 
