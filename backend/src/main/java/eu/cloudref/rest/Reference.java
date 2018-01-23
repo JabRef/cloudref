@@ -1,5 +1,26 @@
 package eu.cloudref.rest;
 
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.security.RolesAllowed;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
+import javax.ws.rs.core.UriBuilder;
+import javax.ws.rs.core.UriInfo;
+
+import eu.cloudref.dal.BibService;
 import eu.cloudref.dal.ReferencesService;
 import eu.cloudref.db.User;
 import eu.cloudref.models.Rating;
@@ -12,13 +33,6 @@ import org.jbibtex.BibTeXEntry;
 import org.jbibtex.Key;
 import org.jbibtex.StringValue;
 
-import javax.annotation.security.RolesAllowed;
-import javax.ws.rs.*;
-import javax.ws.rs.core.*;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
 @Api
 @Path("references")
 public class Reference {
@@ -28,6 +42,10 @@ public class Reference {
     @RolesAllowed({"USER", "MAINTAINER"})
     @Path("{bibtexkey}")
     public BibTeXEntry getReference(@PathParam("bibtexkey") String bibtexkey, @Context SecurityContext sc) {
+        if (!BibService.bibtexkeyExists(bibtexkey)) {
+            throw new WebApplicationException(Response.status(Response.Status.NOT_FOUND)
+                    .entity("No reference found with BibTeX-key: " + bibtexkey).build());
+        }
 
         BibTeXEntry reference = ReferencesService.getReference(bibtexkey, true);
         if (reference == null) {

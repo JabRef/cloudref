@@ -49,12 +49,7 @@ public class BibService {
     }
 
     public static boolean bibtexkeyExists(String key) {
-        File f = new File(getBibDirectory() + key + ".bib");
-        if (f.exists()) {
-            return true;
-        } else {
-            return false;
-        }
+        return new File(getBibDirectory() + key + ".bib").exists();
     }
 
     private static List<BibTeXEntry> loadBibs(String bibtexkey, boolean modified) {
