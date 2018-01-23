@@ -1,6 +1,6 @@
 # CloudRef [![License:MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://tldrlegal.com/license/mit-license) [![Build Status](https://travis-ci.org/JabRef/cloudref.svg?branch=master)](https://travis-ci.org/JabRef/cloudref)
 
-CloudRef is a cloud-based tool for managing bibliographical references. 
+CloudRef is a web-based tool for managing bibliographical references.
 It supports collaborative work and quality assurance of references.
 The software consists of an Angular application at the front end and a Java application at the back end.
 For the front end the [admin template "ng2-admin" by Akveo](https://akveo.github.io/ng2-admin) is used.
