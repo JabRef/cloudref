@@ -9,8 +9,19 @@ For the front end the [admin template "ng2-admin" by Akveo](https://akveo.github
 
 ## Start using Docker
 
-1. `docker run jabref/cloudref`
+1. `docker run -p 127.0.0.1:8080:8080 jabref/cloudref`
 2. Open <http://localhost:8080/>
+
+The user `maintainer` with password `developer` was created.
+It has full rights for merging references.
+Other users can just be created via the login form and cannot merge if the threshold of 5 was not reached.
+
+### Local build and start
+
+1. `docker build -t cloudref .`
+2. `docker run -p 127.0.0.1:8080:8080 cloudref`
+3. Open <http://localhost:8080/>
+
 
 ## Installation
 
