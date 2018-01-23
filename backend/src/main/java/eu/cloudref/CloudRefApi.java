@@ -21,7 +21,6 @@ public class CloudRefApi extends Application {
         beanConfig.setSchemes(new String[]{"http"});
         beanConfig.setDescription("REST API of the CloudRef system.");
         beanConfig.setTitle("CloudRef API");
-        beanConfig.setHost("localhost:9999");
         beanConfig.setBasePath("");
         beanConfig.setResourcePackage("eu.cloudref");
         beanConfig.setScan(true);

@@ -43,7 +43,7 @@ export class AuthenticatedHttpService extends Http {
         localStorage.removeItem('CloudRefUser');
 
         // redirect if not at login page
-        if (window.location.href.toString() !== 'http://localhost:4200/login') {
+        if (!window.location.href.toString().endsWith('/login')) {
           // user is not logged in
           this.router.navigate(['/login']);
         }
