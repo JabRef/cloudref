@@ -28,7 +28,8 @@ import { Configuration }                                     from '../configurat
 @Injectable()
 export class DefaultApi {
 
-    protected basePath = 'http://localhost:8080';
+    protected basePath = location.protocol + '//' + location.hostname + ':' + (location.port === '4200' ? '8080' : location.port);
+
     public defaultHeaders: Headers = new Headers();
     public configuration: Configuration = new Configuration();
 
