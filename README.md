@@ -16,6 +16,11 @@ The user `maintainer` with password `developer` was created.
 It has full rights for merging references.
 Other users can just be created via the login form and cannot merge if the threshold of 5 was not reached.
 
+Note that the data is stored inside the Docker container and might get lost.
+To connect a local folder (e.g., `D:\CloudRef`) to docker, use following command:
+
+    docker run --rm -v"D:/CloudRef:/root/CloudRef" -p 127.0.0.1:8080:8080 jabref/cloudref
+
 ### Local build and start
 
 1. `docker build -t cloudref .`
