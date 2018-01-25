@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Rating {
 
     @Id
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name = "username")
     private User user;
     @Column(name="username", updatable = false, insertable = false)

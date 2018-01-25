@@ -3,6 +3,7 @@ package eu.cloudref.dal;
 import eu.cloudref.db.User;
 import eu.cloudref.models.MergeInstruction;
 import eu.cloudref.models.Rating;
+import eu.cloudref.models.Role;
 import org.hibernate.Criteria;
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
@@ -22,6 +23,7 @@ public class ReferencesService {
     private static final int THRESHOLD_CONFIRMATION = 3;
     private static final int THRESHOLD_MIN = -2;
     private static final int THRESHOLD_MAX = 2;
+    private static final int WEIGHT_RATING_MAINTAINER = 3;
 
     public static List<BibTeXEntry> getReferences() {
         List<BibTeXEntry> result = new ArrayList<>();
@@ -127,13 +129,27 @@ public class ReferencesService {
         int rate = 0;
         if (rating != null && !rating.isEmpty()) {
             for (eu.cloudref.db.Rating r : rating) {
-                switch (r.getRating()) {
-                    case POSITIVE:
-                        rate += 1;
-                        break;
-                    case NEGATIVE:
-                        rate -= 1;
-                        break;
+                User u = r.getUser();
+
+                if (u != null) {
+                    Role role = u.getUserRole();
+
+                    switch (r.getRating()) {
+                        case POSITIVE:
+                            if (role == Role.MAINTAINER) {
+                                rate += WEIGHT_RATING_MAINTAINER;
+                            } else {
+                                rate += 1;
+                            }
+                            break;
+                        case NEGATIVE:
+                            if (role == Role.MAINTAINER) {
+                                rate -= WEIGHT_RATING_MAINTAINER;
+                            } else {
+                                rate -= 1;
+                            }
+                            break;
+                    }
                 }
             }
         }
