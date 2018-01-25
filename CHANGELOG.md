@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- A vote of a MAINTAINER is now worth 3 points (instead of 1 as of the other users)
+
 ## 0.1.0
 
 Initial public release.
