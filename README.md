@@ -1,4 +1,4 @@
-# CloudRef [![License:MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://tldrlegal.com/license/mit-license) [![Build Status](https://travis-ci.org/JabRef/cloudref.svg?branch=master)](https://travis-ci.org/JabRef/cloudref) [![Help Contribute to Open Source](https://www.codetriage.com/jabref/cloudref/badges/users.svg)](https://www.codetriage.com/jabref/cloudref)
+# CloudRef [![License:MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://tldrlegal.com/license/mit-license) [![Build Status](https://travis-ci.org/JabRef/cloudref.svg?branch=master)](https://travis-ci.org/JabRef/cloudref) [![Help Contribute to Open Source](https://www.codetriage.com/jabref/cloudref/badges/users.svg)](https://www.codetriage.com/jabref/cloudref) [![Join Open Source Firday](https://img.shields.io/badge/Open%20Source-Friday-60B37A.svg)](https://opensourcefriday.com/)
 
 CloudRef is a web-based tool for managing bibliographical references.
 It supports collaborative work and quality assurance of references.
