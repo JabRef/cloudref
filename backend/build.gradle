@@ -14,7 +14,8 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.jbibtex', name: 'jbibtex', version: '1.0.17'
+    // jbibtex 1.0.17 from maven central throws strange errors, so we use our customized version
+    compile files('libs/jbibtex.jar')
 
     compile group: 'org.glassfish.jersey.core', name: 'jersey-server', version: '2.25.1'
     compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-jdk-http', version: '2.25.1'
