@@ -13,6 +13,9 @@
 import * as models from './models';
 
 export interface BibTeXEntry {
+
+    '@class': String;
+
     type?: models.Key;
 
     key?: models.Key;
