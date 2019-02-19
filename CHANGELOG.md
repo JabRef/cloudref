@@ -7,19 +7,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-## [0.2.1] - 2019-02-18
+## [0.2.1] – 2019-02-18
 
 ### Fixed
 
 - A create of an entry does not lead to a 500 server error with something with `@class` anymore.
 
-## [0.2.0] - 2018-02-04
+## [0.2.0] – 2018-02-04
 
 ### Changed
 
 - A vote of a user having the role `MAINTAINER` is now worth 3 points (instead of 1 as of the other users).
 
-## 0.1.0 - 2018-01-24
+## 0.1.0 – 2018-01-24
 
 Initial public release.
 
