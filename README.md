@@ -2,14 +2,14 @@
 
 > CloudRef is a web-based tool for managing bibliographical references.
 
+> Scientific publication: [Oliver Kopp, Uwe Breitenbücher, Tamara Müller:
+CloudRef – Towards Collaborative Reference Management in the Cloud. ZEUS 2018, CEUR-WS.org](http://ceur-ws.org/Vol-2072/paper10.pdf)
+
 CloudRef supports collaborative work and quality assurance of references.
 The software consists of an Angular application at the front end and a Java application at the back end.
 For the front end the [admin template "ng2-admin" by Akveo](https://akveo.github.io/ng2-admin) is used.
 
 ![CloudRef Screenshot](https://user-images.githubusercontent.com/14543255/32387802-e67fa39a-c0c5-11e7-98bc-b69c441e4300.jpg)
-
-> Scientific publiction: [Oliver Kopp, Uwe Breitenbücher, Tamara Müller:
-CloudRef – Towards Collaborative Reference Management in the Cloud. ZEUS 2018, CEUR-WS.org](http://ceur-ws.org/Vol-2072/paper10.pdf)
 
 ## Start using Docker
 
