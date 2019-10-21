@@ -55,6 +55,18 @@ npm -v
 3. Install dependencies
 
        npm install
+       
+### Create CloudRef.sqlite in your users home directory
+
+1. Download the SQLite Command Line Shell ("sqlite-tools") from <https://sqlite.org/download.html>.
+2. Copy `sqlite3.exe` into the folder where the database is stored `{USER_DIRECTORY}/CloudRef`
+3. Run `sqlite3.exe`
+4. Run
+```
+    .open CloudRef.sqlite
+```
+5. Run the statements from user-maintainer.sql in the sqlite3 shell
+
 
 ### Start application
 
