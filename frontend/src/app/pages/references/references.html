@@ -53,32 +53,32 @@
     </ngx-datatable-column>
     <ngx-datatable-column [width]="130" name="Type">
       <ng-template let-reference="row" ngx-datatable-cell-template>
-        {{reference.type}}
+        <span [innerHTML]="reference.type | highlight: searchInputValue"></span>
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column [width]="300" name="Author/Editor">
       <ng-template let-reference="row" ngx-datatable-cell-template>
-        {{reference.authorEditor}}
+        <span [innerHTML]="reference.authorEditor | highlight: searchInputValue"></span>
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column [width]="300" name="Title">
       <ng-template let-reference="row" ngx-datatable-cell-template>
-        {{reference.title}}
+        <span [innerHTML]="reference.title | highlight: searchInputValue"></span>
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column [width]="60" name="Year">
       <ng-template let-reference="row" ngx-datatable-cell-template>
-        {{reference.year}}
+        <span [innerHTML]="reference.year | highlight: searchInputValue"></span>
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column name="Journal/Booktitle">
       <ng-template let-reference="row" ngx-datatable-cell-template>
-        {{reference.journalBooktitle}}
+        <span [innerHTML]="reference.journalbooktitle | highlight: searchInputValue"></span>
       </ng-template>
     </ngx-datatable-column>
     <ngx-datatable-column name="BibTeX-Key" prop="bibtexkey">
       <ng-template let-reference="row" ngx-datatable-cell-template>
-        {{reference.bibtexkey}}
+        <span [innerHTML]="reference.bibtextkey | highlight: searchInputValue"></span>
       </ng-template>
     </ngx-datatable-column>
   </ngx-datatable>

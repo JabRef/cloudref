@@ -3,11 +3,12 @@ import { ReferenceViewComponent } from '../pages/references/components/reference
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { HighlightPipe } from "./HighlightPipe";
 
 @NgModule({
   imports: [CommonModule, FormsModule, ReactiveFormsModule, NgbTooltipModule],
-  declarations: [ReferenceViewComponent],
-  exports: [ReferenceViewComponent, CommonModule, FormsModule],
+  declarations: [ReferenceViewComponent, HighlightPipe],
+  exports: [ReferenceViewComponent, CommonModule, FormsModule, HighlightPipe],
 })
 
 export class SharedModule { }

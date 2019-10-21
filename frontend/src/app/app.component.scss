@@ -28,16 +28,20 @@
         display: block;
         overflow: hidden;
         transition: width 0.5s ease;
+
         &.slide-right {
           width: 135px;
         }
+
         &::before {
           display: none;
         }
+
         li {
           &::before {
             display: none;
           }
+
           a {
             padding-left: 18px;
             padding-right: 18px;
@@ -119,5 +123,8 @@
     .al-footer {
       padding-left: 0;
     }
+  }
+  .search-highlight {
+    background-color: yellow;
   }
 }
