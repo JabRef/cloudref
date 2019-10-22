@@ -93,3 +93,6 @@ We needed to change the `basePath` in `DefaultApi.ts` as follows
     protected basePath = location.protocol + '//' + location.hostname + ':' + location.port === '4200' ? '8080' : location.port;
 
 In case you regenerate `DefaultApi.ts`, please patch this line.
+
+## License
+CloudRef is licensed under the [MIT License](https://github.com/JabRef/cloudref/blob/master/LICENSE). See the [LICENSE](https://github.com/JabRef/cloudref/blob/master/LICENSE) for full MIT license details.
