@@ -205,9 +205,9 @@
     "@types/jquery" "*"
     moment ">=2.14.0"
 
-"@types/jasmine@2.5.38":
-  version "2.5.38"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.38.tgz#a4379124c4921d4e21de54ec74669c9e9b356717"
+"@types/jasmine@3.5.11":
+  version "3.5.11"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.5.11.tgz#ba8e80639dffbe277f49c708b45373a320d158e2"
 
 "@types/jquery.slimscroll@1.3.30":
   version "1.3.30"
