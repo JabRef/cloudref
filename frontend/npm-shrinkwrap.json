@@ -6805,9 +6805,9 @@
       "integrity": "sha1-9126Ggs3bC5rSfc84rLXwpYUpVU="
     },
     "ngx-uploader": {
-      "version": "2.2.5",
-      "resolved": "https://registry.npmjs.org/ngx-uploader/-/ngx-uploader-2.2.5.tgz",
-      "integrity": "sha1-4lgmzABYkvJ5W/9ynUKCobDSjAs="
+      "version": "4.3.0",
+      "resolved": "https://registry.npmjs.org/ngx-uploader/-/ngx-uploader-4.3.0.tgz",
+      "integrity": "sha512-ZCnr1z6zkfQNIIJfoy3AjOHUqNZFmpY/aQFvhBqLPkbyDnMYLk/xxGi3QLn9vrmWas+buR/jvI3AYOsAqnhtyw=="
     },
     "no-case": {
       "version": "2.3.1",
