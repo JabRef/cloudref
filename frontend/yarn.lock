@@ -180,9 +180,9 @@
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-6.0.1.tgz#7c7a80077feb994fc815b67a72065af04d394efe"
 
-"@ngx-translate/http-loader@0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-0.0.3.tgz#8346c8d2d6f630254601029668f17abe2afe8a9b"
+"@ngx-translate/http-loader@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-0.1.0.tgz#6029325561d7868fe325a419de2770e98ff1502e"
 
 "@swimlane/ngx-datatable@10.2.3":
   version "10.2.3"
