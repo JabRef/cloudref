@@ -307,9 +307,9 @@
       }
     },
     "@types/lodash": {
-      "version": "4.14.61",
-      "resolved": "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.61.tgz",
-      "integrity": "sha1-BRjBCAWx+dIfmPgrExGsKm7HWJI=",
+      "version": "4.14.157",
+      "resolved": "https://registry.npmjs.org/@types/lodash/-/lodash-4.14.157.tgz",
+      "integrity": "sha512-Ft5BNFmv2pHDgxV5JDsndOWTRJ+56zte0ZpYLowp03tW+K+t8u8YMOzAnpuqPgzX6WO1XpDIUm7u04M8vdDiVQ==",
       "dev": true
     },
     "@types/node": {
