@@ -4228,9 +4228,9 @@ ng2-completer@1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/ng2-completer/-/ng2-completer-1.3.1.tgz#f75dba1a0b376c2e6b49f73ce2b2d7c29614a555"
 
-ngx-uploader@2.2.5:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/ngx-uploader/-/ngx-uploader-2.2.5.tgz#e25826cc005892f2795bff729d4282a1b0d28c0b"
+ngx-uploader@4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/ngx-uploader/-/ngx-uploader-4.3.0.tgz#f3a7d2247fda90d52f7406abfef0152086bd8c54"
 
 no-case@^2.2.0:
   version "2.3.1"
