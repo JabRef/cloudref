@@ -1415,9 +1415,9 @@
       }
     },
     "chartist": {
-      "version": "0.10.1",
-      "resolved": "https://registry.npmjs.org/chartist/-/chartist-0.10.1.tgz",
-      "integrity": "sha1-PdUT1THfymt453f+BQDZx+ZAaTE="
+      "version": "0.11.4",
+      "resolved": "https://registry.npmjs.org/chartist/-/chartist-0.11.4.tgz",
+      "integrity": "sha512-H4AimxaUD738/u9Mq8t27J4lh6STsLi4BQHt65nOtpLk3xyrBPaLiLMrHw7/WV9CmsjGA02WihjuL5qpSagLYw=="
     },
     "chokidar": {
       "version": "1.7.0",
