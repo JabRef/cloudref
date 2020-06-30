@@ -100,7 +100,7 @@
     "protractor": "5.1.0",
     "rimraf": "2.6.1",
     "standard-changelog": "1.0.1",
-    "stylelint": "7.10.1",
+    "stylelint": "13.6.1",
     "ts-node": "2.1.2",
     "tslint": "5.2.0",
     "tslint-eslint-rules": "4.0.0",
