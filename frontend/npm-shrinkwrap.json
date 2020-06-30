@@ -85,6 +85,15 @@
           "integrity": "sha1-eCA6TRwyiuHYbcpkYONptX9AVa4=",
           "dev": true
         },
+        "rxjs": {
+          "version": "5.5.4",
+          "resolved": "https://registry.npmjs.org/rxjs/-/rxjs-5.5.4.tgz",
+          "integrity": "sha512-SFq/gVR1/kj8en/CmaFwX1nPTGUJVtQqzF6V6LLNAziizj/+r0VzztVsaAm/byigKrRxYD0RR52DKIt+6S0DJQ==",
+          "dev": true,
+          "requires": {
+            "symbol-observable": "1.0.1"
+          }
+        },
         "typescript": {
           "version": "2.2.2",
           "resolved": "https://registry.npmjs.org/typescript/-/typescript-2.2.2.tgz",
@@ -12739,9 +12748,9 @@
       }
     },
     "rxjs": {
-      "version": "5.5.4",
-      "resolved": "https://registry.npmjs.org/rxjs/-/rxjs-5.5.4.tgz",
-      "integrity": "sha512-SFq/gVR1/kj8en/CmaFwX1nPTGUJVtQqzF6V6LLNAziizj/+r0VzztVsaAm/byigKrRxYD0RR52DKIt+6S0DJQ==",
+      "version": "5.5.12",
+      "resolved": "https://registry.npmjs.org/rxjs/-/rxjs-5.5.12.tgz",
+      "integrity": "sha512-xx2itnL5sBbqeeiVgNPVuQQ1nC8Jp2WfNJhXWHmElW9YmrpS9UVnNzhP3EH3HFqexO5Tlp8GhYY+WEcqcVMvGw==",
       "requires": {
         "symbol-observable": "1.0.1"
       }
