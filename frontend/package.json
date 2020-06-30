@@ -73,7 +73,7 @@
     "ngx-uploader": "4.3.0",
     "normalize.css": "6.0.0",
     "roboto-fontface": "0.7.0",
-    "rxjs": "^5.5.4",
+    "rxjs": "^5.5.12",
     "web-animations-js": "^2.3.1",
     "zone.js": "0.8.11"
   },
