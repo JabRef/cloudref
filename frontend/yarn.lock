@@ -418,11 +418,11 @@
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
 
-"@types/node@^6.0.46":
-  version "6.0.69"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.69.tgz#82d955985fcad2b95a72fcf5f8ea630d772535a7"
+"@types/node@*":
+  version "14.0.14"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.14.tgz#24a0b5959f16ac141aeb0c5b3cd7a15b7c64cbce"
 
-"@types/node@^6.0.92":
+"@types/node@^6.0.46", "@types/node@^6.0.92":
   version "6.0.95"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.95.tgz#0d027612a77c55b84497ff90a4a7d597e5ac0fab"
 
@@ -1413,9 +1413,9 @@ caniuse-lite@^1.0.30001087, caniuse-lite@^1.0.30001088:
   version "1.0.30001090"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001090.tgz#ff7766332f60e80fea4903f30d360622e5551850"
 
-canvas-renderer@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/canvas-renderer/-/canvas-renderer-1.0.0.tgz#be15680c25c6878944101ca06fd5538ea7179fd4"
+canvas-renderer@~2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/canvas-renderer/-/canvas-renderer-2.1.1.tgz#d91fe9511ab48056ff9fa8a04514bede76535f55"
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -4806,12 +4806,12 @@ jasminewd2@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/jasminewd2/-/jasminewd2-2.0.0.tgz#10aacd2c588c1ceb6a0b849f1a7f3f959f777c91"
 
-jdenticon@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/jdenticon/-/jdenticon-1.7.2.tgz#4472bd161f6ca94b0cbc96b798a7cb3099a73cc2"
+jdenticon@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/jdenticon/-/jdenticon-2.2.0.tgz#6a9d9cb2134a7848ff21d59b3871148cbc6af87f"
   dependencies:
-    canvas-renderer "~1.0.0"
-    requirejs "^2.3.3"
+    "@types/node" "*"
+    canvas-renderer "~2.1.1"
 
 jju@^1.1.0:
   version "1.3.0"
@@ -8135,10 +8135,6 @@ require-from-string@^1.1.0:
 require-main-filename@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-1.0.1.tgz#97f717b69d48784f5f526a6c5aa8ffdda055a4d1"
-
-requirejs@^2.3.3:
-  version "2.3.5"
-  resolved "https://registry.yarnpkg.com/requirejs/-/requirejs-2.3.5.tgz#617b9acbbcb336540ef4914d790323a8d4b861b0"
 
 requires-port@1.0.x, requires-port@1.x.x:
   version "1.0.0"
