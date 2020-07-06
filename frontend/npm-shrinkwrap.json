@@ -3285,7 +3285,7 @@
       "integrity": "sha1-fLhgNZujvpDgQLJrcpzkv6ZUxSM=",
       "dev": true,
       "requires": {
-        "esutils": "1.1.6",
+        "esutils": "^1.1.6",
         "isarray": "0.0.1"
       },
       "dependencies": {
@@ -16180,14 +16180,31 @@
       }
     },
     "tslint-eslint-rules": {
-      "version": "4.0.0",
-      "resolved": "https://registry.npmjs.org/tslint-eslint-rules/-/tslint-eslint-rules-4.0.0.tgz",
-      "integrity": "sha1-Tg5Z7NVwHJpIxm7Ue9yvscY10ns=",
+      "version": "5.4.0",
+      "resolved": "https://registry.npmjs.org/tslint-eslint-rules/-/tslint-eslint-rules-5.4.0.tgz",
+      "integrity": "sha512-WlSXE+J2vY/VPgIcqQuijMQiel+UtmXS+4nvK4ZzlDiqBfXse8FAvkNnTcYhnQyOTW5KFM+uRRGXxYhFpuBc6w==",
       "dev": true,
       "requires": {
         "doctrine": "0.7.2",
-        "tslib": "1.7.1",
-        "tsutils": "1.9.1"
+        "tslib": "1.9.0",
+        "tsutils": "^3.0.0"
+      },
+      "dependencies": {
+        "tslib": {
+          "version": "1.9.0",
+          "resolved": "https://registry.npmjs.org/tslib/-/tslib-1.9.0.tgz",
+          "integrity": "sha512-f/qGG2tUkrISBlQZEjEqoZ3B2+npJjIf04H1wuAv9iA8i04Icp+61KRXxFdha22670NJopsZCIjhC3SnjPRKrQ==",
+          "dev": true
+        },
+        "tsutils": {
+          "version": "3.17.1",
+          "resolved": "https://registry.npmjs.org/tsutils/-/tsutils-3.17.1.tgz",
+          "integrity": "sha512-kzeQ5B8H3w60nFY2g8cJIuH7JDpsALXySGtwGJ0p2LSjLgay3NdIpqq5SoOBe46bKDW2iq25irHCr8wjomUS2g==",
+          "dev": true,
+          "requires": {
+            "tslib": "^1.8.1"
+          }
+        }
       }
     },
     "tslint-language-service": {
