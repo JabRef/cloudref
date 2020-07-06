@@ -154,11 +154,11 @@
       }
     },
     "@angular/core": {
-      "version": "4.2.3",
-      "resolved": "https://registry.npmjs.org/@angular/core/-/core-4.2.3.tgz",
-      "integrity": "sha1-q3MpwY1P0wWHK4Jxj/rj525NRUk=",
+      "version": "4.4.7",
+      "resolved": "https://registry.npmjs.org/@angular/core/-/core-4.4.7.tgz",
+      "integrity": "sha512-Jxs6gNTl5KjXflg5vi5rlnokq1johFccN94qSOgDv+Mg1iuGF2i9p7EHkw3Y8jBCVaSLw1qgHE+wMb6KTlJDLA==",
       "requires": {
-        "tslib": "1.7.1"
+        "tslib": "^1.7.1"
       }
     },
     "@angular/forms": {
