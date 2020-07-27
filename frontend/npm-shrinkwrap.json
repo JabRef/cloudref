@@ -15636,12 +15636,6 @@
         "rechoir": "^0.6.2"
       }
     },
-    "sigmund": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/sigmund/-/sigmund-1.0.1.tgz",
-      "integrity": "sha1-P/IfGYytIXX587eBhT/ZTQ0ZtZA=",
-      "dev": true
-    },
     "signal-exit": {
       "version": "3.0.2",
       "resolved": "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz",
@@ -18144,15 +18138,15 @@
       "dev": true
     },
     "typogr": {
-      "version": "0.6.6",
-      "resolved": "https://registry.npmjs.org/typogr/-/typogr-0.6.6.tgz",
-      "integrity": "sha1-ScsppiPU8MTTntkdt5DYR+SjYOg=",
+      "version": "0.6.8",
+      "resolved": "https://registry.npmjs.org/typogr/-/typogr-0.6.8.tgz",
+      "integrity": "sha512-zjUkJd8Nt9NvXTzjBYpk5Pw0OgXTStgATbUAAhVvCrFtjvRVcDvtKjtxCRMRZsK0fx2MVa8hoqMiTPSgWOA9pg==",
       "dev": true,
       "requires": {
-        "async": "0.2.10",
-        "commander": "1.0.5",
-        "glob": "3.2.11",
-        "mkdirp": "0.3.5"
+        "async": "0.2",
+        "commander": "1.0",
+        "glob": "^7.1.2",
+        "mkdirp": "0.3"
       },
       "dependencies": {
         "async": {
@@ -18167,33 +18161,7 @@
           "integrity": "sha1-RXKVu5duOI6d0NtS3kMz4knz2Iw=",
           "dev": true,
           "requires": {
-            "keypress": "0.1.0"
-          }
-        },
-        "glob": {
-          "version": "3.2.11",
-          "resolved": "https://registry.npmjs.org/glob/-/glob-3.2.11.tgz",
-          "integrity": "sha1-Spc/Y1uRkPcV0QmH1cAP0oFevj0=",
-          "dev": true,
-          "requires": {
-            "inherits": "2.0.3",
-            "minimatch": "0.3.0"
-          }
-        },
-        "lru-cache": {
-          "version": "2.7.3",
-          "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-2.7.3.tgz",
-          "integrity": "sha1-bUUk6LlV+V1PW1iFHOId1y+06VI=",
-          "dev": true
-        },
-        "minimatch": {
-          "version": "0.3.0",
-          "resolved": "https://registry.npmjs.org/minimatch/-/minimatch-0.3.0.tgz",
-          "integrity": "sha1-J12O2qxPG7MyZHIInnlJyDlGmd0=",
-          "dev": true,
-          "requires": {
-            "lru-cache": "2.7.3",
-            "sigmund": "1.0.1"
+            "keypress": "0.1.x"
           }
         },
         "mkdirp": {
