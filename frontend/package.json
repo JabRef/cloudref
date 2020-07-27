@@ -75,7 +75,7 @@
     "roboto-fontface": "0.10.0",
     "rxjs": "^5.5.12",
     "web-animations-js": "^2.3.2",
-    "zone.js": "0.8.11"
+    "zone.js": "0.10.3"
   },
   "devDependencies": {
     "@angular/cli": "1.0.4",

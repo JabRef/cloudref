@@ -106,6 +106,12 @@
           "resolved": "https://registry.npmjs.org/typescript/-/typescript-2.2.2.tgz",
           "integrity": "sha1-YGAiUIR5tV/6NotY/uljoD39eww=",
           "dev": true
+        },
+        "zone.js": {
+          "version": "0.8.11",
+          "resolved": "https://registry.npmjs.org/zone.js/-/zone.js-0.8.11.tgz",
+          "integrity": "sha1-dCvvsX+8SaVxcSuMfYfljKJv2IY=",
+          "dev": true
         }
       }
     },
@@ -19754,9 +19760,9 @@
       }
     },
     "zone.js": {
-      "version": "0.8.11",
-      "resolved": "https://registry.npmjs.org/zone.js/-/zone.js-0.8.11.tgz",
-      "integrity": "sha1-dCvvsX+8SaVxcSuMfYfljKJv2IY="
+      "version": "0.10.3",
+      "resolved": "https://registry.npmjs.org/zone.js/-/zone.js-0.10.3.tgz",
+      "integrity": "sha512-LXVLVEq0NNOqK/fLJo3d0kfzd4sxwn2/h67/02pjCjfKDxgx1i9QqpvtHD8CrBnSSwMw5+dy11O7FRX5mkO7Cg=="
     }
   }
 }
