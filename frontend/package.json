@@ -101,7 +101,7 @@
     "rimraf": "3.0.2",
     "standard-changelog": "2.0.24",
     "stylelint": "13.6.1",
-    "ts-node": "2.1.2",
+    "ts-node": "8.10.2",
     "tslint": "5.20.1",
     "tslint-eslint-rules": "5.4.0",
     "tslint-language-service": "0.9.6",
