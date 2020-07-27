@@ -5848,9 +5848,9 @@ neo-async@^2.6.0:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
 
-ng2-completer@1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/ng2-completer/-/ng2-completer-1.3.1.tgz#f75dba1a0b376c2e6b49f73ce2b2d7c29614a555"
+ng2-completer@2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/ng2-completer/-/ng2-completer-2.0.4.tgz#5c5769bb45538af3a3082c754b5977166eed87c4"
 
 ngx-uploader@4.3.0:
   version "4.3.0"
