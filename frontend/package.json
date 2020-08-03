@@ -41,10 +41,10 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^10.0.5",
+    "@angular/animations": "^10.0.7",
     "@angular/common": "^4.2.3",
     "@angular/compiler": "^4.2.3",
-    "@angular/core": "^10.0.5",
+    "@angular/core": "^10.0.7",
     "@angular/forms": "^10.0.7",
     "@angular/http": "^7.2.16",
     "@angular/platform-browser": "^4.2.3",
