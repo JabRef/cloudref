@@ -45,7 +45,7 @@
     "@angular/common": "^4.2.3",
     "@angular/compiler": "^4.2.3",
     "@angular/core": "^10.0.5",
-    "@angular/forms": "^4.2.3",
+    "@angular/forms": "^10.0.7",
     "@angular/http": "^7.2.16",
     "@angular/platform-browser": "^4.2.3",
     "@angular/platform-browser-dynamic": "^4.2.3",
