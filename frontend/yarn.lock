@@ -374,9 +374,9 @@
     remark "^12.0.0"
     unist-util-find-all-after "^3.0.1"
 
-"@swimlane/ngx-datatable@10.2.3":
-  version "10.2.3"
-  resolved "https://registry.yarnpkg.com/@swimlane/ngx-datatable/-/ngx-datatable-10.2.3.tgz#19b607fc34c47d6bd5f6082d7a7d0d8491889e4a"
+"@swimlane/ngx-datatable@17.1.0":
+  version "17.1.0"
+  resolved "https://registry.yarnpkg.com/@swimlane/ngx-datatable/-/ngx-datatable-17.1.0.tgz#ef2f91c3783526e7e89ac7a62a53e7bc9e1c90d5"
 
 "@types/babel-types@*", "@types/babel-types@^7.0.0":
   version "7.0.7"
