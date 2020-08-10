@@ -308,9 +308,11 @@
     update-notifier "^2.2.0"
     yargs "^8.0.2"
 
-"@ng-bootstrap/ng-bootstrap@1.0.0-beta.6":
-  version "1.0.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-1.0.0-beta.6.tgz#676cb6c1c6334c3b34d0d549938386ba99796462"
+"@ng-bootstrap/ng-bootstrap@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-7.0.0.tgz#3bfa62eb52fdb891b1ce693ea11c39127e2d1ab7"
+  dependencies:
+    tslib "^2.0.0"
 
 "@ngx-translate/core@6.0.1":
   version "6.0.1"
