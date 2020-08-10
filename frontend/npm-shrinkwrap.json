@@ -618,9 +618,19 @@
       }
     },
     "@ng-bootstrap/ng-bootstrap": {
-      "version": "1.0.0-beta.6",
-      "resolved": "https://registry.npmjs.org/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-1.0.0-beta.6.tgz",
-      "integrity": "sha1-Z2y2wcYzTDs00NVJk4OGupl5ZGI="
+      "version": "7.0.0",
+      "resolved": "https://registry.npmjs.org/@ng-bootstrap/ng-bootstrap/-/ng-bootstrap-7.0.0.tgz",
+      "integrity": "sha512-SxUaptGWJmCxM0d2Zy1mx7K7p/YBwGZ69NmmBQVY4BE6p5av0hWrVmv9rzzfBz0rhxU7RPZLor2Jpaoq8Xyl4w==",
+      "requires": {
+        "tslib": "^2.0.0"
+      },
+      "dependencies": {
+        "tslib": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.0.1.tgz",
+          "integrity": "sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ=="
+        }
+      }
     },
     "@ngx-translate/core": {
       "version": "6.0.1",
