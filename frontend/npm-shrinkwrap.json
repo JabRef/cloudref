@@ -178,11 +178,18 @@
       }
     },
     "@angular/compiler": {
-      "version": "4.2.3",
-      "resolved": "https://registry.npmjs.org/@angular/compiler/-/compiler-4.2.3.tgz",
-      "integrity": "sha1-6c3tR5lM9K23Ui13jEax98UmMwI=",
+      "version": "10.0.8",
+      "resolved": "https://registry.npmjs.org/@angular/compiler/-/compiler-10.0.8.tgz",
+      "integrity": "sha512-8zpxmDgDs45Q0rm1D3Gb4NP4CToizdOy7oBhDN7ijukRXAl19oE5vj1mHWvalbtgeC13kfdrdlQ8Ke2z61cd/g==",
       "requires": {
-        "tslib": "1.7.1"
+        "tslib": "^2.0.0"
+      },
+      "dependencies": {
+        "tslib": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.0.1.tgz",
+          "integrity": "sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ=="
+        }
       }
     },
     "@angular/compiler-cli": {
