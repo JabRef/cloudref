@@ -104,7 +104,7 @@
     "ts-node": "8.10.2",
     "tslint": "6.1.3",
     "tslint-eslint-rules": "5.4.0",
-    "tslint-language-service": "0.9.6",
+    "tslint-language-service": "0.9.9",
     "typescript": "^2.9.2",
     "typogr": "0.6.8",
     "underscore": "1.10.2",
