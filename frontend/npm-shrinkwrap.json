@@ -7405,9 +7405,9 @@
       "dev": true
     },
     "ng2-completer": {
-      "version": "2.0.4",
-      "resolved": "https://registry.npmjs.org/ng2-completer/-/ng2-completer-2.0.4.tgz",
-      "integrity": "sha1-XFdpu0VTivOjCCx1S1l3Fm7th8Q="
+      "version": "9.0.1",
+      "resolved": "https://registry.npmjs.org/ng2-completer/-/ng2-completer-9.0.1.tgz",
+      "integrity": "sha512-zEKehHdCK8E/k4Y0HepprGdYBHr2AOsaq4QpeqoCyUElOOC5M3qi3ZEHV1VF54I7heBQktswwXe5UyWduJ0Xeg=="
     },
     "ngx-uploader": {
       "version": "4.3.0",
