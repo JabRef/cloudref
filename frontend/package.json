@@ -52,7 +52,7 @@
     "@angular/platform-server": "^4.2.3",
     "@angular/router": "^4.2.3",
     "@ng-bootstrap/ng-bootstrap": "7.0.0",
-    "@ngx-translate/core": "6.0.1",
+    "@ngx-translate/core": "9.1.1",
     "@ngx-translate/http-loader": "6.0.0",
     "@swimlane/ngx-datatable": "17.1.0",
     "amcharts3": "github:amcharts/amcharts3",
