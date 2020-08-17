@@ -789,21 +789,12 @@
       "dev": true
     },
     "@types/fullcalendar": {
-      "version": "2.7.40",
-      "resolved": "https://registry.npmjs.org/@types/fullcalendar/-/fullcalendar-2.7.40.tgz",
-      "integrity": "sha1-ywdm1Qn8ibSkLNGZ2Lc4XAt4x/w=",
+      "version": "3.8.0",
+      "resolved": "https://registry.npmjs.org/@types/fullcalendar/-/fullcalendar-3.8.0.tgz",
+      "integrity": "sha512-uxYNAnvH7s3asQjkH8p0K1V4ENMLQDGNmFHWA7/iRZwU13A7RCOvnNoRapEIIRx8hI/+wHWkd4Q9KmpVCQfIEg==",
       "dev": true,
       "requires": {
-        "@types/jquery": "2.0.41",
-        "moment": "2.18.1"
-      },
-      "dependencies": {
-        "@types/jquery": {
-          "version": "2.0.41",
-          "resolved": "https://registry.npmjs.org/@types/jquery/-/jquery-2.0.41.tgz",
-          "integrity": "sha1-uHugUQEfme2+WG2Plygud4bgGm0=",
-          "dev": true
-        }
+        "fullcalendar": "*"
       }
     },
     "@types/jasmine": {
@@ -7324,12 +7315,6 @@
       "version": "1.0.1",
       "resolved": "https://registry.npmjs.org/modify-values/-/modify-values-1.0.1.tgz",
       "integrity": "sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==",
-      "dev": true
-    },
-    "moment": {
-      "version": "2.18.1",
-      "resolved": "https://registry.npmjs.org/moment/-/moment-2.18.1.tgz",
-      "integrity": "sha1-w2GT3Tzhwu7SrbfIAtu8d6gbHA8=",
       "dev": true
     },
     "move-concurrently": {

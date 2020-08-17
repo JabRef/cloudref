@@ -394,12 +394,11 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
 
-"@types/fullcalendar@2.7.40":
-  version "2.7.40"
-  resolved "https://registry.yarnpkg.com/@types/fullcalendar/-/fullcalendar-2.7.40.tgz#cb0766d509fc89b4a42cd199d8b7385c0b78c7fc"
+"@types/fullcalendar@3.8.0":
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/@types/fullcalendar/-/fullcalendar-3.8.0.tgz#9d523b78d1f96efea27a81578763eadabfabdf0d"
   dependencies:
-    "@types/jquery" "*"
-    moment ">=2.14.0"
+    fullcalendar "*"
 
 "@types/jasmine@3.5.12":
   version "3.5.12"
@@ -2573,7 +2572,7 @@ fstream@^1.0.0, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-fullcalendar@5.3.0:
+fullcalendar@*, fullcalendar@5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/fullcalendar/-/fullcalendar-5.3.0.tgz#6275667b9bc18696752a3b1fbc8d12ee09566d0f"
 
@@ -4473,10 +4472,6 @@ mock-require@^2.0.2:
 modify-values@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.0.tgz#e2b6cdeb9ce19f99317a53722f3dbf5df5eaaab2"
-
-moment@>=2.14.0:
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
 move-concurrently@^1.0.1:
   version "1.0.1"
