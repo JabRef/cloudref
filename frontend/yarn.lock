@@ -400,9 +400,9 @@
   dependencies:
     fullcalendar "*"
 
-"@types/jasmine@3.5.12":
-  version "3.5.12"
-  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.5.12.tgz#5c378c1545cdc7cb339cff5578f854b6d1e0a17d"
+"@types/jasmine@3.5.13":
+  version "3.5.13"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.5.13.tgz#f5d34d7f9d0ad15e7c17adbaf1ebfaca68a60f73"
 
 "@types/jquery.slimscroll@1.3.31":
   version "1.3.31"
