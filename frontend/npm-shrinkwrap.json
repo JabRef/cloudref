@@ -261,11 +261,18 @@
       }
     },
     "@angular/platform-browser": {
-      "version": "4.2.3",
-      "resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-4.2.3.tgz",
-      "integrity": "sha1-mhrM/J6TqVYQErugN6BLQc7cAlU=",
+      "version": "10.0.11",
+      "resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-10.0.11.tgz",
+      "integrity": "sha512-u3kXnnsuKRUTeA47+SnmGUhs1k9HKVm3rKaXUfqbHouDHz2SMQg/bvWBG5Nq8FFZYdNa3lV6q1l03/Zf7kaZNg==",
       "requires": {
-        "tslib": "1.7.1"
+        "tslib": "^2.0.0"
+      },
+      "dependencies": {
+        "tslib": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.0.1.tgz",
+          "integrity": "sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ=="
+        }
       }
     },
     "@angular/platform-browser-dynamic": {
