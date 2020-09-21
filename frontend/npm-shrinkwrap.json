@@ -903,9 +903,19 @@
       }
     },
     "@swimlane/ngx-datatable": {
-      "version": "17.1.0",
-      "resolved": "https://registry.npmjs.org/@swimlane/ngx-datatable/-/ngx-datatable-17.1.0.tgz",
-      "integrity": "sha512-zYUS7uNO9OJ5UQZFuuTRjlPu6vdKA+FHYLfeEs7PgSuUiDCcbl2SWoUdS/3zIoWn/qQyws767ueWiAvvWUbpEw=="
+      "version": "18.0.0",
+      "resolved": "https://registry.npmjs.org/@swimlane/ngx-datatable/-/ngx-datatable-18.0.0.tgz",
+      "integrity": "sha512-secqjzlLpGJqoXjcoCoTf8ClnVlZAENJcXvuBfseGenOD+evGNXc4UTZhwCPDUBlJ4xnMZHUWK6IVk5sXe+WlQ==",
+      "requires": {
+        "tslib": "^2.0.0"
+      },
+      "dependencies": {
+        "tslib": {
+          "version": "2.0.1",
+          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.0.1.tgz",
+          "integrity": "sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ=="
+        }
+      }
     },
     "@types/babel-types": {
       "version": "7.0.7",
