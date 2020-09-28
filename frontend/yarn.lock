@@ -3712,9 +3712,9 @@ karma-jasmine@4.0.1:
   dependencies:
     jasmine-core "^3.6.0"
 
-karma@5.2.2:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/karma/-/karma-5.2.2.tgz#2e51d877635a8c3e4d07e83f1271ec2b1ab75cc0"
+karma@5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/karma/-/karma-5.2.3.tgz#3264024219bad2728e92542e0058a2492d7a46e4"
   dependencies:
     body-parser "^1.19.0"
     braces "^3.0.2"
@@ -3737,7 +3737,7 @@ karma@5.2.2:
     socket.io "^2.3.0"
     source-map "^0.6.1"
     tmp "0.2.1"
-    ua-parser-js "0.7.21"
+    ua-parser-js "0.7.22"
     yargs "^15.3.1"
 
 keypress@0.1.x:
@@ -7185,9 +7185,9 @@ typogr@0.6.8:
     glob "^7.1.2"
     mkdirp "0.3"
 
-ua-parser-js@0.7.21:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
+ua-parser-js@0.7.22:
+  version "0.7.22"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.22.tgz#960df60a5f911ea8f1c818f3747b99c6e177eae3"
 
 uglify-js@^2.6.1:
   version "2.8.29"
