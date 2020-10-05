@@ -1381,9 +1381,9 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-codelyzer@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/codelyzer/-/codelyzer-6.0.0.tgz#50c98581cc2890e0e9a9f93878dc317115d836ed"
+codelyzer@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/codelyzer/-/codelyzer-6.0.1.tgz#c0e9668e847255b37c759e68fb2700b11e277d0f"
   dependencies:
     "@angular/compiler" "9.0.0"
     "@angular/core" "9.0.0"
@@ -6079,7 +6079,7 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@6.6.2, rxjs@^6.5.3:
+rxjs@6.6.2:
   version "6.6.2"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.2.tgz#8096a7ac03f2cc4fe5860ef6e572810d9e01c0d2"
   dependencies:
@@ -6091,7 +6091,7 @@ rxjs@^5.5.12:
   dependencies:
     symbol-observable "1.0.1"
 
-rxjs@^6.6.0:
+rxjs@^6.5.3, rxjs@^6.6.0:
   version "6.6.3"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
   dependencies:
