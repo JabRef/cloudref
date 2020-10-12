@@ -267,17 +267,17 @@
       }
     },
     "@angular/platform-browser": {
-      "version": "10.1.4",
-      "resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-10.1.4.tgz",
-      "integrity": "sha512-iEJQCfOrGXSgf0qTdfCMiAzrdecmAzBnF/WzD5Kpy+/NBL+K574KeiV2hTadxdKLJzJojEy2kKZKbb7mnWI9bQ==",
+      "version": "10.1.5",
+      "resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-10.1.5.tgz",
+      "integrity": "sha512-qMAoPHt6dgXMtieI4zx/s5yX7FFRRUDp1R4GMBCZHPN3p66WdEVxBJo4p5RWhZJioXpUwKz8Xvc+Rrh7r0KDBA==",
       "requires": {
         "tslib": "^2.0.0"
       },
       "dependencies": {
         "tslib": {
-          "version": "2.0.1",
-          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.0.1.tgz",
-          "integrity": "sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ=="
+          "version": "2.0.3",
+          "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.0.3.tgz",
+          "integrity": "sha512-uZtkfKblCEQtZKBF6EBXVZeQNl82yqtDQdv+eck8u7tdPxjLu2/lp5/uPW+um2tpuxINHWy3GhiccY7QgEaVHQ=="
         }
       }
     },
