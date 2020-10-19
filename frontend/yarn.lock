@@ -110,9 +110,9 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/platform-browser@^10.1.5":
-  version "10.1.5"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-10.1.5.tgz#b166b6f520e34012c91e2586022d00c5e2be8f49"
+"@angular/platform-browser@^10.1.6":
+  version "10.1.6"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-10.1.6.tgz#3a71ed7bd88d3fea28e364716957ab1f6a20d0aa"
   dependencies:
     tslib "^2.0.0"
 
