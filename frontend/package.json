@@ -81,7 +81,7 @@
     "@angular/cli": "10.1.7",
     "@angular/compiler-cli": "^4.2.3",
     "@types/fullcalendar": "3.8.0",
-    "@types/jasmine": "3.5.14",
+    "@types/jasmine": "3.6.0",
     "@types/jquery": "3.5.3",
     "@types/jquery.slimscroll": "1.3.31",
     "@types/lodash": "4.14.162",
