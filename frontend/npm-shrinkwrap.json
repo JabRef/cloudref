@@ -267,9 +267,9 @@
       }
     },
     "@angular/platform-browser": {
-      "version": "10.2.0",
-      "resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-10.2.0.tgz",
-      "integrity": "sha512-GqO4MH7sddzvirr6AwxPXIfFFQp1+Xs5BCguSajyqt7i1j7vA0mKvFCvO7tIYmJmepWa0YPs9cXtq8nxDAoqVA==",
+      "version": "10.2.1",
+      "resolved": "https://registry.npmjs.org/@angular/platform-browser/-/platform-browser-10.2.1.tgz",
+      "integrity": "sha512-kuxqntIbiyxHIgEopBXoO10HqsFQyzV8Y11+KcnIFN0tte7oOAc6REvUxnvtwKOyFOyYQFv0BhA1QCuddqytGA==",
       "requires": {
         "tslib": "^2.0.0"
       },
