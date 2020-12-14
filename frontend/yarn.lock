@@ -412,9 +412,9 @@
   dependencies:
     "@types/jquery" "*"
 
-"@types/jquery@*", "@types/jquery@3.5.4":
-  version "3.5.4"
-  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.4.tgz#e923f7d05ca790530f17f80a3b89bc28853fa17f"
+"@types/jquery@*", "@types/jquery@3.5.5":
+  version "3.5.5"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.5.tgz#2c63f47c9c8d96693d272f5453602afd8338c903"
   dependencies:
     "@types/sizzle" "*"
 
