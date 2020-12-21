@@ -2,16 +2,16 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.1100.4":
-  version "0.1100.4"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1100.4.tgz#68c2b0333daa0291ad99205862111c04e7a63020"
+"@angular-devkit/architect@0.1100.5":
+  version "0.1100.5"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1100.5.tgz#3cf9b25464d484160b10417668efbdbd15c9e492"
   dependencies:
-    "@angular-devkit/core" "11.0.4"
+    "@angular-devkit/core" "11.0.5"
     rxjs "6.6.3"
 
-"@angular-devkit/core@11.0.4":
-  version "11.0.4"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-11.0.4.tgz#4128b90bdb4d1803bb246d177b7cc6df64a0fec1"
+"@angular-devkit/core@11.0.5":
+  version "11.0.5"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-11.0.5.tgz#8239486d2de6c08fc55d2a64f12a7f5d518c8beb"
   dependencies:
     ajv "6.12.6"
     fast-json-stable-stringify "2.1.0"
@@ -19,11 +19,11 @@
     rxjs "6.6.3"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@11.0.4":
-  version "11.0.4"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-11.0.4.tgz#0680fe038c66f2ecc3c69a293505fb02b694ce80"
+"@angular-devkit/schematics@11.0.5":
+  version "11.0.5"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-11.0.5.tgz#e5d89451daa644eccce93970709f7cdf44c11982"
   dependencies:
-    "@angular-devkit/core" "11.0.4"
+    "@angular-devkit/core" "11.0.5"
     ora "5.1.0"
     rxjs "6.6.3"
 
@@ -33,19 +33,19 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/cli@11.0.4":
-  version "11.0.4"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-11.0.4.tgz#a04724f7ffb27417df59c2359e47ec54e1f61fab"
+"@angular/cli@11.0.5":
+  version "11.0.5"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-11.0.5.tgz#1066d290fc91460f98cedcfbc9a5736340661467"
   dependencies:
-    "@angular-devkit/architect" "0.1100.4"
-    "@angular-devkit/core" "11.0.4"
-    "@angular-devkit/schematics" "11.0.4"
-    "@schematics/angular" "11.0.4"
-    "@schematics/update" "0.1100.4"
+    "@angular-devkit/architect" "0.1100.5"
+    "@angular-devkit/core" "11.0.5"
+    "@angular-devkit/schematics" "11.0.5"
+    "@schematics/angular" "11.0.5"
+    "@schematics/update" "0.1100.5"
     "@yarnpkg/lockfile" "1.1.0"
     ansi-colors "4.1.1"
     debug "4.2.0"
-    ini "1.3.5"
+    ini "1.3.6"
     inquirer "7.3.3"
     npm-package-arg "8.1.0"
     npm-pick-manifest "6.1.0"
@@ -342,22 +342,22 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@schematics/angular@11.0.4":
-  version "11.0.4"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-11.0.4.tgz#36268ebda718c4f395457d2eea874fda9c469402"
+"@schematics/angular@11.0.5":
+  version "11.0.5"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-11.0.5.tgz#149f908fd600e881ff87c5192d2673d0e3c37f38"
   dependencies:
-    "@angular-devkit/core" "11.0.4"
-    "@angular-devkit/schematics" "11.0.4"
+    "@angular-devkit/core" "11.0.5"
+    "@angular-devkit/schematics" "11.0.5"
     jsonc-parser "2.3.1"
 
-"@schematics/update@0.1100.4":
-  version "0.1100.4"
-  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.1100.4.tgz#b67efdb39396ddcacef97de008100944af3d1556"
+"@schematics/update@0.1100.5":
+  version "0.1100.5"
+  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.1100.5.tgz#40b529d93db51e6f66378bd9f4ff99f2e9c278f6"
   dependencies:
-    "@angular-devkit/core" "11.0.4"
-    "@angular-devkit/schematics" "11.0.4"
+    "@angular-devkit/core" "11.0.5"
+    "@angular-devkit/schematics" "11.0.5"
     "@yarnpkg/lockfile" "1.1.0"
-    ini "1.3.5"
+    ini "1.3.6"
     npm-package-arg "^8.0.0"
     pacote "9.5.12"
     semver "7.3.2"
@@ -3133,9 +3133,9 @@ inherits@2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
-ini@1.3.5, ini@^1.3.2, ini@^1.3.4, ini@^1.3.5, ini@~1.3.0:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
+ini@1.3.6, ini@^1.3.2, ini@^1.3.4, ini@^1.3.5, ini@~1.3.0:
+  version "1.3.6"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.6.tgz#f1c46a2a93a253e7b3905115e74d527cd23061a1"
 
 init-package-json@^1.10.3:
   version "1.10.3"
