@@ -5952,9 +5952,9 @@
       "dev": true
     },
     "ionicons": {
-      "version": "5.2.3",
-      "resolved": "https://registry.npmjs.org/ionicons/-/ionicons-5.2.3.tgz",
-      "integrity": "sha512-87qtgBkieKVFagwYA9Cf91B3PCahQbEOMwMt8bSvlQSgflZ4eE5qI4MGj2ZlIyadeX0dgo+0CzZsy3ow0CsBAg=="
+      "version": "5.3.0",
+      "resolved": "https://registry.npmjs.org/ionicons/-/ionicons-5.3.0.tgz",
+      "integrity": "sha512-HU8g9fnuoBF3GUBXq4GcWYoOZ6mjMRUL2X1s/QyPsbZjGRrwBcsK+I20kxdho+YDPBqa+BQM0h+gzh4H4c9P2A=="
     },
     "ip": {
       "version": "1.1.5",
