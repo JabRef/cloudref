@@ -3180,9 +3180,9 @@ invert-kv@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
 
-ionicons@5.2.3:
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.2.3.tgz#af4018ea7585b1e9ae11757731c77f2f36e0c7ac"
+ionicons@5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.3.0.tgz#06aeae29a1cedf4e0e17714104d51aef9675a7d8"
 
 ip-regex@^2.1.0:
   version "2.1.0"
