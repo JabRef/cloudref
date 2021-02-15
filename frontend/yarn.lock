@@ -419,6 +419,10 @@
     semver "7.3.4"
     semver-intersect "1.4.0"
 
+"@stencil/core@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.4.0.tgz#17b45629c8986e35dcbce3f7dab7d64beede83f2"
+
 "@stylelint/postcss-css-in-js@^0.37.2":
   version "0.37.2"
   resolved "https://registry.yarnpkg.com/@stylelint/postcss-css-in-js/-/postcss-css-in-js-0.37.2.tgz#7e5a84ad181f4234a2480803422a47b8749af3d2"
@@ -3299,9 +3303,11 @@ invert-kv@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
 
-ionicons@5.4.0:
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.4.0.tgz#7d8b87edbe250284f1fad0d64b261a6e480adf95"
+ionicons@5.5.0:
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.5.0.tgz#74ab783be11bee60e4351153c80b6d0682e5125a"
+  dependencies:
+    "@stencil/core" "^2.4.0"
 
 ip-regex@^2.1.0:
   version "2.1.0"
