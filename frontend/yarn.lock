@@ -2,16 +2,16 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.1102.3":
-  version "0.1102.3"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1102.3.tgz#c5e022dc85682a2d19a94613f451add2538fd6d6"
+"@angular-devkit/architect@0.1102.8":
+  version "0.1102.8"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1102.8.tgz#c40092deffc012ffd506d6c4217d572acaf6a2d7"
   dependencies:
-    "@angular-devkit/core" "11.2.3"
+    "@angular-devkit/core" "11.2.8"
     rxjs "6.6.3"
 
-"@angular-devkit/core@11.2.3":
-  version "11.2.3"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-11.2.3.tgz#322fb08f4e2683a37bd08edecb04ddafa42865d9"
+"@angular-devkit/core@11.2.8":
+  version "11.2.8"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-11.2.8.tgz#18ee64bdb879143f7c8edb964f08ef4f07912416"
   dependencies:
     ajv "6.12.6"
     fast-json-stable-stringify "2.1.0"
@@ -19,11 +19,11 @@
     rxjs "6.6.3"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@11.2.3":
-  version "11.2.3"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-11.2.3.tgz#4f156ff2f723ad5b24a709bf97fe676c9753a544"
+"@angular-devkit/schematics@11.2.8":
+  version "11.2.8"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-11.2.8.tgz#69622fe775dc685bc869cce752e73cb5183158e7"
   dependencies:
-    "@angular-devkit/core" "11.2.3"
+    "@angular-devkit/core" "11.2.8"
     ora "5.3.0"
     rxjs "6.6.3"
 
@@ -33,15 +33,15 @@
   dependencies:
     tslib "^2.0.0"
 
-"@angular/cli@11.2.3":
-  version "11.2.3"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-11.2.3.tgz#bd27a01994a907b606563a69cb28b9c2e474c171"
+"@angular/cli@11.2.8":
+  version "11.2.8"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-11.2.8.tgz#8514a569ab0f73d10598ce4fc63675b7a70c067d"
   dependencies:
-    "@angular-devkit/architect" "0.1102.3"
-    "@angular-devkit/core" "11.2.3"
-    "@angular-devkit/schematics" "11.2.3"
-    "@schematics/angular" "11.2.3"
-    "@schematics/update" "0.1102.3"
+    "@angular-devkit/architect" "0.1102.8"
+    "@angular-devkit/core" "11.2.8"
+    "@angular-devkit/schematics" "11.2.8"
+    "@schematics/angular" "11.2.8"
+    "@schematics/update" "0.1102.8"
     "@yarnpkg/lockfile" "1.1.0"
     ansi-colors "4.1.1"
     debug "4.3.1"
@@ -399,20 +399,20 @@
     puka "^1.0.1"
     read-package-json-fast "^1.1.3"
 
-"@schematics/angular@11.2.3":
-  version "11.2.3"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-11.2.3.tgz#23befaaa84532cc86219f0eb96d367acdcec177a"
+"@schematics/angular@11.2.8":
+  version "11.2.8"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-11.2.8.tgz#5ab736896cf1319af8c93840d2758c20e8a02589"
   dependencies:
-    "@angular-devkit/core" "11.2.3"
-    "@angular-devkit/schematics" "11.2.3"
+    "@angular-devkit/core" "11.2.8"
+    "@angular-devkit/schematics" "11.2.8"
     jsonc-parser "3.0.0"
 
-"@schematics/update@0.1102.3":
-  version "0.1102.3"
-  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.1102.3.tgz#e139c4888d489946882fbdfdcd5818f9c089fa42"
+"@schematics/update@0.1102.8":
+  version "0.1102.8"
+  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.1102.8.tgz#0607243008fe7f228d8ccbf17316c1ec83ff6b5b"
   dependencies:
-    "@angular-devkit/core" "11.2.3"
-    "@angular-devkit/schematics" "11.2.3"
+    "@angular-devkit/core" "11.2.8"
+    "@angular-devkit/schematics" "11.2.8"
     "@yarnpkg/lockfile" "1.1.0"
     ini "2.0.0"
     npm-package-arg "^8.0.0"
