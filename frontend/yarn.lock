@@ -4772,9 +4772,11 @@ ng2-completer@9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/ng2-completer/-/ng2-completer-9.0.1.tgz#5ba97fd978bfcef746f5ed71d965f65d280de4de"
 
-ngx-uploader@4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/ngx-uploader/-/ngx-uploader-4.3.0.tgz#f3a7d2247fda90d52f7406abfef0152086bd8c54"
+ngx-uploader@11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/ngx-uploader/-/ngx-uploader-11.0.0.tgz#ba599d50a92036153f36561e15f18cbff620fbba"
+  dependencies:
+    tslib "^2.0.0"
 
 nice-try@^1.0.4:
   version "1.0.5"
