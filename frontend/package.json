@@ -61,7 +61,7 @@
     "bootstrap": "4.6.0",
     "chartist": "0.11.4",
     "chroma-js": "2.1.1",
-    "core-js": "3.9.1",
+    "core-js": "3.13.1",
     "font-awesome": "4.7.0",
     "fullcalendar": "5.5.1",
     "ionicons": "5.5.0",
