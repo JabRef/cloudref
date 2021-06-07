@@ -1381,9 +1381,9 @@
       "dev": true
     },
     "@types/node": {
-      "version": "14.14.32",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-14.14.32.tgz",
-      "integrity": "sha512-/Ctrftx/zp4m8JOujM5ZhwzlWLx22nbQJiVqz8/zE15gOeEW+uly3FSX4fGFpcfEvFzXcMCJwq9lGVWgyARXhg=="
+      "version": "15.12.1",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-15.12.1.tgz",
+      "integrity": "sha512-zyxJM8I1c9q5sRMtVF+zdd13Jt6RU4r4qfhTd7lQubyThvLfx6yYekWSQjGCGV2Tkecgxnlpl/DNlb6Hg+dmEw=="
     },
     "@types/normalize-package-data": {
       "version": "2.4.0",
@@ -14062,6 +14062,12 @@
         "socket.io-parser": "~4.0.3"
       },
       "dependencies": {
+        "@types/node": {
+          "version": "14.17.2",
+          "resolved": "https://registry.npmjs.org/@types/node/-/node-14.17.2.tgz",
+          "integrity": "sha512-sld7b/xmFum66AAKuz/rp/CUO8+98fMpyQ3SBfzzBNGMd/1iHBTAg9oyAvcYlAj46bpc74r91jSw2iFdnx29nw==",
+          "dev": true
+        },
         "debug": {
           "version": "4.3.1",
           "resolved": "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz",
