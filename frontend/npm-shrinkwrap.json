@@ -6099,9 +6099,9 @@
       "dev": true
     },
     "ionicons": {
-      "version": "5.5.1",
-      "resolved": "https://registry.npmjs.org/ionicons/-/ionicons-5.5.1.tgz",
-      "integrity": "sha512-1auVisfaXmkmxINer8Q3kJGHP1vSxk86hf7By95eJ+Av9+oBcNuAEBfSe3jaMaGRVxVw8U/2j23MFq7R3c0HPg==",
+      "version": "5.5.2",
+      "resolved": "https://registry.npmjs.org/ionicons/-/ionicons-5.5.2.tgz",
+      "integrity": "sha512-SHVBBtzNVQjY4jtcqKEHkqL5nIQwA/o2MIdU9JtMz8kQAB0NRVJFv5AxwmVbXXKDpxz57SiEjeLp8Uzt7jirpw==",
       "requires": {
         "@stencil/core": "^2.5.0"
       }
