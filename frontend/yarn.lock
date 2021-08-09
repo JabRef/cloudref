@@ -3329,9 +3329,9 @@ invert-kv@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
 
-ionicons@5.5.2:
-  version "5.5.2"
-  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.5.2.tgz#1a92315b7cb1d1d5246a85fded50b75d9cb950ec"
+ionicons@5.5.3:
+  version "5.5.3"
+  resolved "https://registry.yarnpkg.com/ionicons/-/ionicons-5.5.3.tgz#33cfc4c8a590ac45895f2b10309ef4586ed244c1"
   dependencies:
     "@stencil/core" "^2.5.0"
 
