@@ -5,12 +5,12 @@
   "requires": true,
   "dependencies": {
     "@angular-devkit/architect": {
-      "version": "0.1202.9",
-      "resolved": "https://registry.npmjs.org/@angular-devkit/architect/-/architect-0.1202.9.tgz",
-      "integrity": "sha512-s2NcFqZjsdYoR0vhJWLCwykF6hG7F0C5fJJs49i6IJMKj5Ai58z7d2IFYvD8nA60paMvjFS14OQ+E/FEEEZ88Q==",
+      "version": "0.1202.12",
+      "resolved": "https://registry.npmjs.org/@angular-devkit/architect/-/architect-0.1202.12.tgz",
+      "integrity": "sha512-md7F1chg8zwrmX2C2E2GoOaHhXp03+DmGph5CBTB6t8q3yB734I9A2bE5i0TyxCBLZzh8GOTH9nOGSGX6JlYrw==",
       "dev": true,
       "requires": {
-        "@angular-devkit/core": "12.2.9",
+        "@angular-devkit/core": "12.2.12",
         "rxjs": "6.6.7"
       },
       "dependencies": {
@@ -32,9 +32,9 @@
       }
     },
     "@angular-devkit/core": {
-      "version": "12.2.9",
-      "resolved": "https://registry.npmjs.org/@angular-devkit/core/-/core-12.2.9.tgz",
-      "integrity": "sha512-iPHQiga08bbryiVq3QYzwpuq9sNb8CB/MVy65MHJ0fuW1z6RYDeUh1EziitBBUT2d81KWKPO1wQ2DuUoxOg4mg==",
+      "version": "12.2.12",
+      "resolved": "https://registry.npmjs.org/@angular-devkit/core/-/core-12.2.12.tgz",
+      "integrity": "sha512-ZFThmQecQmlniQl65rWn4oOMuWKy313O6Hk8sen7WdsjDircqtbHmtJCA1w/EU4xIilIJHo0Kez4Ihi00cGyYw==",
       "dev": true,
       "requires": {
         "ajv": "8.6.2",
@@ -87,12 +87,12 @@
       }
     },
     "@angular-devkit/schematics": {
-      "version": "12.2.9",
-      "resolved": "https://registry.npmjs.org/@angular-devkit/schematics/-/schematics-12.2.9.tgz",
-      "integrity": "sha512-OcMDCdlIxiir8XntrNXdXEPi9/8BRx54oYZeRosr0sJZlz4pPzsHs36t5uX2DURYYMkNNMaBnf2luUIC+77ZsA==",
+      "version": "12.2.12",
+      "resolved": "https://registry.npmjs.org/@angular-devkit/schematics/-/schematics-12.2.12.tgz",
+      "integrity": "sha512-Z5Z8HvIRoNEXMrfJgVZieSTZyD0TytRJscuW6xS83Aeqp5py9hvs5ytWhlpnTRz0ji8qc67csFKHvphDOqDduQ==",
       "dev": true,
       "requires": {
-        "@angular-devkit/core": "12.2.9",
+        "@angular-devkit/core": "12.2.12",
         "ora": "5.4.1",
         "rxjs": "6.6.7"
       },
@@ -130,15 +130,15 @@
       }
     },
     "@angular/cli": {
-      "version": "12.2.9",
-      "resolved": "https://registry.npmjs.org/@angular/cli/-/cli-12.2.9.tgz",
-      "integrity": "sha512-aYAb6LkqIpKOZE8Kkhst5NNWpM4W1o1mmPTt6Nm6b/4wVLSC+mDp1IBCJSihDWysDetXA5J3kNJ4R2XnpHpIKw==",
+      "version": "12.2.12",
+      "resolved": "https://registry.npmjs.org/@angular/cli/-/cli-12.2.12.tgz",
+      "integrity": "sha512-69M5lrXuHKBkPne8h1v1Mgl9aJZhc+jamU7iZjQhlIt8xL1pTGr/y9/4S+sX1gKEGhd6p/82KwJ1CFcm/Kjhfg==",
       "dev": true,
       "requires": {
-        "@angular-devkit/architect": "0.1202.9",
-        "@angular-devkit/core": "12.2.9",
-        "@angular-devkit/schematics": "12.2.9",
-        "@schematics/angular": "12.2.9",
+        "@angular-devkit/architect": "0.1202.12",
+        "@angular-devkit/core": "12.2.12",
+        "@angular-devkit/schematics": "12.2.12",
+        "@schematics/angular": "12.2.12",
         "@yarnpkg/lockfile": "1.1.0",
         "ansi-colors": "4.1.1",
         "debug": "4.3.2",
@@ -187,9 +187,9 @@
           "dev": true
         },
         "is-core-module": {
-          "version": "2.7.0",
-          "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.7.0.tgz",
-          "integrity": "sha512-ByY+tjCciCr+9nLryBYcSD50EOGWt95c7tIsKTG1J2ixKKXPvF7Ej3AVd+UfDydAJom3biBGDBALaO79ktwgEQ==",
+          "version": "2.8.0",
+          "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.8.0.tgz",
+          "integrity": "sha512-vd15qHsaqrRL7dtH6QNuy0ndJmRDrS9HAM1CAiSifNUFv4x1a0CCVsj18hJ1mShxIG6T2i1sO78MkP56r0nYRw==",
           "dev": true,
           "requires": {
             "has": "^1.0.3"
@@ -1246,13 +1246,13 @@
       }
     },
     "@schematics/angular": {
-      "version": "12.2.9",
-      "resolved": "https://registry.npmjs.org/@schematics/angular/-/angular-12.2.9.tgz",
-      "integrity": "sha512-IIczXVwegREekub0+bBxOc0dDL7j8p5rG6rB/2btJRR+tg04milP+BkvnQgksmIkW1OcZ5beRSB37R3jY/W/PA==",
+      "version": "12.2.12",
+      "resolved": "https://registry.npmjs.org/@schematics/angular/-/angular-12.2.12.tgz",
+      "integrity": "sha512-XkHs4aMlOT64QxfDbIBFLxM/qCsuhkZ6G696C0t3eEX2kA1OmED34Qs1ezwb7fqdlcSrt3D3SGdBBcMzaMT7hg==",
       "dev": true,
       "requires": {
-        "@angular-devkit/core": "12.2.9",
-        "@angular-devkit/schematics": "12.2.9",
+        "@angular-devkit/core": "12.2.12",
+        "@angular-devkit/schematics": "12.2.12",
         "jsonc-parser": "3.0.0"
       }
     },
