@@ -4816,9 +4816,9 @@
       }
     },
     "fullcalendar": {
-      "version": "5.9.0",
-      "resolved": "https://registry.npmjs.org/fullcalendar/-/fullcalendar-5.9.0.tgz",
-      "integrity": "sha512-kUfkWov2YQFemafgL0x9ogx2TPmgZze/VsWYvmajgr+bmoVY28XXErQ3MGfgWbM18QWdmvBIVhJCGY81MdbL+w=="
+      "version": "5.10.1",
+      "resolved": "https://registry.npmjs.org/fullcalendar/-/fullcalendar-5.10.1.tgz",
+      "integrity": "sha512-0jgDxiWRuC36MzAUK3+Equmu4R0+vAPEtttsXLX9GNNDUHEZ5HjcH+dUtWut4vlJtxGJgVZ+eZ76/7qhcu+RMA=="
     },
     "function-bind": {
       "version": "1.1.0",
