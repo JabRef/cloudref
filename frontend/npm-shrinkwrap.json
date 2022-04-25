@@ -15699,9 +15699,9 @@
       "optional": true
     },
     "underscore": {
-      "version": "1.12.0",
-      "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.12.0.tgz",
-      "integrity": "sha512-21rQzss/XPMjolTiIezSu3JAjgagXKROtNrYFEOWK109qY1Uv2tVjPTZ1ci2HgvQDA16gHYSthQIJfB+XId/rQ==",
+      "version": "1.13.3",
+      "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.13.3.tgz",
+      "integrity": "sha512-QvjkYpiD+dJJraRA8+dGAU4i7aBbb2s0S3jA45TFOvg2VgqvdCDd/3N6CqA8gluk1W91GLoXg5enMUx560QzuA==",
       "dev": true
     },
     "unified": {
