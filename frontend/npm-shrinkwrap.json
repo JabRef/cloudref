@@ -3644,9 +3644,9 @@
       "dev": true
     },
     "core-js": {
-      "version": "3.18.2",
-      "resolved": "https://registry.npmjs.org/core-js/-/core-js-3.18.2.tgz",
-      "integrity": "sha512-zNhPOUoSgoizoSQFdX1MeZO16ORRb9FFQLts8gSYbZU5FcgXhp24iMWMxnOQo5uIaIG7/6FA/IqJPwev1o9ZXQ=="
+      "version": "3.25.2",
+      "resolved": "https://registry.npmjs.org/core-js/-/core-js-3.25.2.tgz",
+      "integrity": "sha512-YB4IAT1bjEfxTJ1XYy11hJAKskO+qmhuDBM8/guIfMz4JvdsAQAqvyb97zXX7JgSrfPLG5mRGFWJwJD39ruq2A=="
     },
     "core-util-is": {
       "version": "1.0.2",
