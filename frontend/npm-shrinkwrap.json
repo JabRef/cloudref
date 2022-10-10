@@ -1419,9 +1419,9 @@
       "dev": true
     },
     "@types/node": {
-      "version": "16.10.3",
-      "resolved": "https://registry.npmjs.org/@types/node/-/node-16.10.3.tgz",
-      "integrity": "sha512-ho3Ruq+fFnBrZhUYI46n/bV2GjwzSkwuT4dTf0GkuNFmnb8nq4ny2z9JEVemFi6bdEJanHLlYfy9c6FN9B9McQ=="
+      "version": "18.8.3",
+      "resolved": "https://registry.npmjs.org/@types/node/-/node-18.8.3.tgz",
+      "integrity": "sha512-0os9vz6BpGwxGe9LOhgP/ncvYN5Tx1fNcd2TM3rD/aCGBkysb+ZWpXEocG24h6ZzOi13+VB8HndAQFezsSOw1w=="
     },
     "@types/normalize-package-data": {
       "version": "2.4.0",
