@@ -1374,9 +1374,9 @@
       }
     },
     "@types/jasmine": {
-      "version": "3.9.1",
-      "resolved": "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.9.1.tgz",
-      "integrity": "sha512-PVpjh8S8lqKFKurWSKdFATlfBHGPzgy0PoDdzQ+rr78jTQ0aacyh9YndzZcAUPxhk4kRujItFFGQdUJ7flHumw==",
+      "version": "4.3.1",
+      "resolved": "https://registry.npmjs.org/@types/jasmine/-/jasmine-4.3.1.tgz",
+      "integrity": "sha512-Vu8l+UGcshYmV1VWwULgnV/2RDbBaO6i2Ptx7nd//oJPIZGhoI1YLST4VKagD2Pq/Bc2/7zvtvhM7F3p4SN7kQ==",
       "dev": true
     },
     "@types/jquery": {
