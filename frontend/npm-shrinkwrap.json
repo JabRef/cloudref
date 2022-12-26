@@ -928,6 +928,37 @@
         "kuler": "^2.0.0"
       }
     },
+    "@fullcalendar/core": {
+      "version": "6.0.1",
+      "resolved": "https://registry.npmjs.org/@fullcalendar/core/-/core-6.0.1.tgz",
+      "integrity": "sha512-JMBRbWrez8hKhS1wvqAW3TBSo58/xRmDHUu07x/lywdct4gD7Z9QphC/VDNqbRQpTknHHmOjMqSmauEwQ6wbaA==",
+      "requires": {
+        "preact": "^10.0.5"
+      }
+    },
+    "@fullcalendar/daygrid": {
+      "version": "6.0.1",
+      "resolved": "https://registry.npmjs.org/@fullcalendar/daygrid/-/daygrid-6.0.1.tgz",
+      "integrity": "sha512-QKbZZhJ2LCvHjc0E7bbos5kGRZJ024i0JliTr2H+0zgaSORHp4kzbk+w+XJpRc2v/DbGKMrlFSDVLKNE99BLSQ=="
+    },
+    "@fullcalendar/interaction": {
+      "version": "6.0.1",
+      "resolved": "https://registry.npmjs.org/@fullcalendar/interaction/-/interaction-6.0.1.tgz",
+      "integrity": "sha512-LdIaBaW5vAVGxXleBuHSQnk6O41DjiPsqomCUKQo6jboZvzWZnqS1xnpspeFjunDoYxBldr4nmTxbYFfxU88Iw=="
+    },
+    "@fullcalendar/list": {
+      "version": "6.0.1",
+      "resolved": "https://registry.npmjs.org/@fullcalendar/list/-/list-6.0.1.tgz",
+      "integrity": "sha512-7+hFIZ92MJGeDIWLvjWhmrr8gseRUfwo8bKhBFA2CnTJGy99Q3STF9F2eyxQ46h6LcRPJr7uaNkWZbqZQv1TvQ=="
+    },
+    "@fullcalendar/timegrid": {
+      "version": "6.0.1",
+      "resolved": "https://registry.npmjs.org/@fullcalendar/timegrid/-/timegrid-6.0.1.tgz",
+      "integrity": "sha512-1yGy79z1riIIe1j/uyAZ1GaY++4K/QHb/Je6Shm0r45DCMgpeabahMOR0HywKqzzBAMmgJdko2vKWoPnueNyEw==",
+      "requires": {
+        "@fullcalendar/daygrid": "~6.0.1"
+      }
+    },
     "@gar/promisify": {
       "version": "1.1.2",
       "resolved": "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.2.tgz",
@@ -4816,9 +4847,16 @@
       }
     },
     "fullcalendar": {
-      "version": "5.9.0",
-      "resolved": "https://registry.npmjs.org/fullcalendar/-/fullcalendar-5.9.0.tgz",
-      "integrity": "sha512-kUfkWov2YQFemafgL0x9ogx2TPmgZze/VsWYvmajgr+bmoVY28XXErQ3MGfgWbM18QWdmvBIVhJCGY81MdbL+w=="
+      "version": "6.0.1",
+      "resolved": "https://registry.npmjs.org/fullcalendar/-/fullcalendar-6.0.1.tgz",
+      "integrity": "sha512-5rILt2MUMm2ECHusLuBQIq3FdDyeWVL4wRRhLj3NXnMIzbGzzh9dJCvSLal48yEJR3ksUTYE4KYt1R4ZWy8tgQ==",
+      "requires": {
+        "@fullcalendar/core": "~6.0.1",
+        "@fullcalendar/daygrid": "~6.0.1",
+        "@fullcalendar/interaction": "~6.0.1",
+        "@fullcalendar/list": "~6.0.1",
+        "@fullcalendar/timegrid": "~6.0.1"
+      }
     },
     "function-bind": {
       "version": "1.1.0",
@@ -12496,6 +12534,11 @@
       "resolved": "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz",
       "integrity": "sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==",
       "dev": true
+    },
+    "preact": {
+      "version": "10.11.3",
+      "resolved": "https://registry.npmjs.org/preact/-/preact-10.11.3.tgz",
+      "integrity": "sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg=="
     },
     "process-nextick-args": {
       "version": "1.0.7",
