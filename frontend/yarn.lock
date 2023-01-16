@@ -310,6 +310,30 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
+"@fullcalendar/core@~6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-6.0.3.tgz#cb2d78e747d9baf8a609d2cc54c6a7cfe2e2f833"
+  dependencies:
+    preact "^10.0.5"
+
+"@fullcalendar/daygrid@~6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-6.0.3.tgz#e4abf955b6308e6823b65722558c0669aebe5388"
+
+"@fullcalendar/interaction@~6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-6.0.3.tgz#ad968b3dd952076965af260e6da08409330415b6"
+
+"@fullcalendar/list@~6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/list/-/list-6.0.3.tgz#28e1a509c9e35112c4a5923ea6b45ce1419e3c15"
+
+"@fullcalendar/timegrid@~6.0.3":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-6.0.3.tgz#abc60b125e436e7bb0b1cfcb9cdd735b34c034d6"
+  dependencies:
+    "@fullcalendar/daygrid" "~6.0.3"
+
 "@iarna/cli@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@iarna/cli/-/cli-1.2.0.tgz#0f7af5e851afe895104583c4ca07377a8094d641"
@@ -2727,9 +2751,15 @@ fstream@^1.0.0, fstream@^1.0.12:
     mkdirp ">=0.5 0"
     rimraf "2"
 
-fullcalendar@*, fullcalendar@5.9.0:
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/fullcalendar/-/fullcalendar-5.9.0.tgz#16ec6f1a13ad6642c565ce4e7b145bc0e7b05fe1"
+fullcalendar@*, fullcalendar@6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/fullcalendar/-/fullcalendar-6.0.3.tgz#009adca561e25d32bd968f74140d51ebe04cf86c"
+  dependencies:
+    "@fullcalendar/core" "~6.0.3"
+    "@fullcalendar/daygrid" "~6.0.3"
+    "@fullcalendar/interaction" "~6.0.3"
+    "@fullcalendar/list" "~6.0.3"
+    "@fullcalendar/timegrid" "~6.0.3"
 
 function-bind@^1.0.2, function-bind@^1.1.0:
   version "1.1.0"
@@ -5766,6 +5796,10 @@ postcss@^7.0.14, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.
     chalk "^2.4.2"
     source-map "^0.6.1"
     supports-color "^6.1.0"
+
+preact@^10.0.5:
+  version "10.11.3"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.11.3.tgz#8a7e4ba19d3992c488b0785afcc0f8aa13c78d19"
 
 prepend-http@^1.0.1:
   version "1.0.4"
