@@ -10,7 +10,8 @@ targetCompatibility = '1.8'
 
 repositories {
     mavenCentral()
-    jcenter()
+    // JCenter is gone; JitPack serves com.github.bkromhout:java-diff-utils, which is not on Maven Central
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
