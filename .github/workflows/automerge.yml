@@ -13,7 +13,7 @@ jobs:
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: Merge pull requests
-        uses: pascalgn/automerge-action@v0.8.4
+        uses: pascalgn/automerge-action@v0.16.4
         env:
           MERGE_METHOD: "squash"
           MERGE_LABELS: ""
