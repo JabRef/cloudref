@@ -1,20 +1,24 @@
-name: Automerge Pull Requests
-on:
-  pull_request:
-  check_suite:
-    types:
-      - completed
-  status: {}
+name: Dependabot auto-merge
+
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
-  automerge:
-    name: Automerge Dependabot
-    runs-on: ubuntu-latest
+  dependabot:
+    # Restrict to Dependabot's own pull requests. Only those runs receive the
+    # write-scoped token the merge step below relies on.
     if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
     steps:
-      - name: Merge pull requests
-        uses: pascalgn/automerge-action@v0.8.4
+      - name: Enable auto-merge for Dependabot PRs
+        # Turns on GitHub's native auto-merge for every Dependabot update. The
+        # PR still merges only after the required "backend" and "frontend"
+        # checks pass (branch protection on main), so a bump that breaks the
+        # build is held back automatically.
+        run: gh pr merge --auto --squash "$PR_URL"
         env:
-          MERGE_METHOD: "squash"
-          MERGE_LABELS: ""
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
