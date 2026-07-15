@@ -99,7 +99,7 @@
     "rimraf": "2.6.1",
     "standard-changelog": "1.0.1",
     "stylelint": "7.10.1",
-    "ts-node": "2.1.2",
+    "ts-node": "10.9.2",
     "tslint": "5.2.0",
     "tslint-eslint-rules": "4.0.0",
     "tslint-language-service": "0.9.6",
