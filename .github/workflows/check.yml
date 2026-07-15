@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - name: Set up Node.js 8
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           # Angular 4 / @angular/cli 1.4 (the frontend's stack) needs the Node 8
           # ABI; node-sass 4.14 ships a prebuilt binary only for this line.
